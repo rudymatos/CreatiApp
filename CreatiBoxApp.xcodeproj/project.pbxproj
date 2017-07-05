@@ -7,23 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50F25D41F0A5F4E0093ACB2 /* SupervisorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25D31F0A5F4E0093ACB2 /* SupervisorVC.swift */; };
+		F50F25D61F0B30EB0093ACB2 /* Saloon Girl Fill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */; };
+		F50F25D91F0B3B000093ACB2 /* BranchOfficeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25D81F0B3B000093ACB2 /* BranchOfficeTVC.swift */; };
+		F50F25DB1F0B3B780093ACB2 /* pulp fiction m54.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */; };
+		F50F25FC1F0B52040093ACB2 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25FB1F0B52040093ACB2 /* ReportVC.swift */; };
+		F50F25FF1F0BAC120093ACB2 /* ReportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25FE1F0BAC120093ACB2 /* ReportType.swift */; };
+		F50F26011F0BB12A0093ACB2 /* StockTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F26001F0BB12A0093ACB2 /* StockTVC.swift */; };
+		F51332141F097A2600C26CFD /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51332131F097A2600C26CFD /* GameVC.swift */; };
+		F51D021B1F0866D3003DE5E0 /* AppControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D021A1F0866D3003DE5E0 /* AppControl.swift */; };
+		F51D021E1F086739003DE5E0 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D021D1F086739003DE5E0 /* UIViewControllerExtension.swift */; };
+		F51D02201F086C42003DE5E0 /* PromontionPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D021F1F086C42003DE5E0 /* PromontionPersonVC.swift */; };
 		F53A38191F04524B00F853D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38181F04524B00F853D0 /* AppDelegate.swift */; };
-		F53A381B1F04524B00F853D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A381A1F04524B00F853D0 /* ViewController.swift */; };
+		F53A381B1F04524B00F853D0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A381A1F04524B00F853D0 /* MainVC.swift */; };
 		F53A381E1F04524B00F853D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53A381C1F04524B00F853D0 /* Main.storyboard */; };
 		F53A38211F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F53A381F1F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld */; };
 		F53A38231F04524B00F853D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53A38221F04524B00F853D0 /* Assets.xcassets */; };
 		F53A38261F04524B00F853D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53A38241F04524B00F853D0 /* LaunchScreen.storyboard */; };
+		F53A38401F06664600F853D0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A383F1F06664600F853D0 /* CoreDataHelper.swift */; };
+		F53A38431F066A3A00F853D0 /* LoginUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38411F066A3A00F853D0 /* LoginUser+CoreDataClass.swift */; };
+		F53A38441F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38421F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift */; };
+		F53A38481F066C0E00F853D0 /* AppExceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38471F066C0E00F853D0 /* AppExceptions.swift */; };
+		F53A384A1F066C8400F853D0 /* InitialDataCreatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */; };
+		F5A8B9DE1F085C9C00F26A79 /* SelectBranchOfficeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8B9DD1F085C9C00F26A79 /* SelectBranchOfficeVC.swift */; };
+		F5CDDE351F07E47800F1E056 /* CreatiBoxAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE341F07E47800F1E056 /* CreatiBoxAppTests.swift */; };
+		F5CDDE3F1F07E52300F1E056 /* CreatiBoxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE3E1F07E52300F1E056 /* CreatiBoxType.swift */; };
+		F5CDDE411F07E5AC00F1E056 /* CreatiBoxAppImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE401F07E5AC00F1E056 /* CreatiBoxAppImpl.swift */; };
+		F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */; };
+		F5CDDE561F08027C00F1E056 /* Prize+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE501F08027C00F1E056 /* Prize+CoreDataClass.swift */; };
+		F5CDDE571F08027C00F1E056 /* Prize+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE511F08027C00F1E056 /* Prize+CoreDataProperties.swift */; };
+		F5CDDE581F08027C00F1E056 /* BranchOffice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE521F08027C00F1E056 /* BranchOffice+CoreDataClass.swift */; };
+		F5CDDE591F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE531F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift */; };
+		F5CDDE5A1F08027C00F1E056 /* Winner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE541F08027C00F1E056 /* Winner+CoreDataClass.swift */; };
+		F5CDDE5B1F08027C00F1E056 /* Winner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE551F08027C00F1E056 /* Winner+CoreDataProperties.swift */; };
+		F5CDDE601F083B3700F1E056 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F5CDDE371F07E47800F1E056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F53A380D1F04524B00F853D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F53A38141F04524B00F853D0;
+			remoteInfo = CreatiBoxApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F50F25D31F0A5F4E0093ACB2 /* SupervisorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupervisorVC.swift; sourceTree = "<group>"; };
+		F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saloon Girl Fill.ttf"; sourceTree = "<group>"; };
+		F50F25D81F0B3B000093ACB2 /* BranchOfficeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchOfficeTVC.swift; sourceTree = "<group>"; };
+		F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pulp fiction m54.ttf"; sourceTree = "<group>"; };
+		F50F25FB1F0B52040093ACB2 /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		F50F25FE1F0BAC120093ACB2 /* ReportType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportType.swift; sourceTree = "<group>"; };
+		F50F26001F0BB12A0093ACB2 /* StockTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTVC.swift; sourceTree = "<group>"; };
+		F51332131F097A2600C26CFD /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		F51D021A1F0866D3003DE5E0 /* AppControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppControl.swift; sourceTree = "<group>"; };
+		F51D021D1F086739003DE5E0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F51D021F1F086C42003DE5E0 /* PromontionPersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromontionPersonVC.swift; sourceTree = "<group>"; };
 		F53A38151F04524B00F853D0 /* CreatiBoxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreatiBoxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A38181F04524B00F853D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F53A381A1F04524B00F853D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F53A381A1F04524B00F853D0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F53A381D1F04524B00F853D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F53A38201F04524B00F853D0 /* CreatiBoxApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CreatiBoxApp.xcdatamodel; sourceTree = "<group>"; };
 		F53A38221F04524B00F853D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F53A38251F04524B00F853D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F53A38271F04524B00F853D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F53A383F1F06664600F853D0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		F53A38411F066A3A00F853D0 /* LoginUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F53A38421F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F53A38471F066C0E00F853D0 /* AppExceptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExceptions.swift; sourceTree = "<group>"; };
+		F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialDataCreatorHelper.swift; sourceTree = "<group>"; };
+		F5A8B9DD1F085C9C00F26A79 /* SelectBranchOfficeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBranchOfficeVC.swift; sourceTree = "<group>"; };
+		F5CDDE321F07E47800F1E056 /* CreatiBoxAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreatiBoxAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CDDE341F07E47800F1E056 /* CreatiBoxAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatiBoxAppTests.swift; sourceTree = "<group>"; };
+		F5CDDE361F07E47800F1E056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CDDE3E1F07E52300F1E056 /* CreatiBoxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatiBoxType.swift; sourceTree = "<group>"; };
+		F5CDDE401F07E5AC00F1E056 /* CreatiBoxAppImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatiBoxAppImpl.swift; sourceTree = "<group>"; };
+		F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewHelper.swift; sourceTree = "<group>"; };
+		F5CDDE501F08027C00F1E056 /* Prize+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5CDDE511F08027C00F1E056 /* Prize+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5CDDE521F08027C00F1E056 /* BranchOffice+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BranchOffice+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5CDDE531F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BranchOffice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5CDDE541F08027C00F1E056 /* Winner+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5CDDE551F08027C00F1E056 /* Winner+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CreatiBoxApp v1.0.xcdatamodel"; sourceTree = "<group>"; };
+		F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +103,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5CDDE2F1F07E47800F1E056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F50F25D71F0B37BB0093ACB2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F50F25D81F0B3B000093ACB2 /* BranchOfficeTVC.swift */,
+				F50F26001F0BB12A0093ACB2 /* StockTVC.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		F50F25FA1F0B51E30093ACB2 /* supervisor */ = {
+			isa = PBXGroup;
+			children = (
+				F50F25FB1F0B52040093ACB2 /* ReportVC.swift */,
+			);
+			name = supervisor;
+			sourceTree = "<group>";
+		};
+		F50F25FD1F0BAC020093ACB2 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				F50F25FE1F0BAC120093ACB2 /* ReportType.swift */,
+			);
+			name = enums;
+			sourceTree = "<group>";
+		};
+		F51D021C1F086728003DE5E0 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F51D021D1F086739003DE5E0 /* UIViewControllerExtension.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		F53A380C1F04524B00F853D0 = {
 			isa = PBXGroup;
 			children = (
 				F53A38171F04524B00F853D0 /* CreatiBoxApp */,
+				F5CDDE331F07E47800F1E056 /* CreatiBoxAppTests */,
 				F53A38161F04524B00F853D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F53A38151F04524B00F853D0 /* CreatiBoxApp.app */,
+				F5CDDE321F07E47800F1E056 /* CreatiBoxAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +167,98 @@
 		F53A38171F04524B00F853D0 /* CreatiBoxApp */ = {
 			isa = PBXGroup;
 			children = (
-				F53A38181F04524B00F853D0 /* AppDelegate.swift */,
-				F53A381A1F04524B00F853D0 /* ViewController.swift */,
+				F50F25FD1F0BAC020093ACB2 /* enums */,
+				F51D021C1F086728003DE5E0 /* extensions */,
+				F5A8B9DC1F085C8100F26A79 /* controllers */,
+				F5CDDE3D1F07E4F600F1E056 /* implementation */,
+				F5CDDE3C1F07E4ED00F1E056 /* protocols */,
+				F53A384B1F066F3B00F853D0 /* supporting_files */,
+				F53A383E1F06663600F853D0 /* helpers */,
+				F53A382D1F06655F00F853D0 /* entities */,
 				F53A381C1F04524B00F853D0 /* Main.storyboard */,
+			);
+			path = CreatiBoxApp;
+			sourceTree = "<group>";
+		};
+		F53A382D1F06655F00F853D0 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDDE501F08027C00F1E056 /* Prize+CoreDataClass.swift */,
+				F5CDDE511F08027C00F1E056 /* Prize+CoreDataProperties.swift */,
+				F5CDDE521F08027C00F1E056 /* BranchOffice+CoreDataClass.swift */,
+				F5CDDE531F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift */,
+				F5CDDE541F08027C00F1E056 /* Winner+CoreDataClass.swift */,
+				F5CDDE551F08027C00F1E056 /* Winner+CoreDataProperties.swift */,
+				F53A38411F066A3A00F853D0 /* LoginUser+CoreDataClass.swift */,
+				F53A38421F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
+		F53A383E1F06663600F853D0 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F53A383F1F06664600F853D0 /* CoreDataHelper.swift */,
+				F53A38471F066C0E00F853D0 /* AppExceptions.swift */,
+				F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */,
+				F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */,
+				F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */,
+				F51D021A1F0866D3003DE5E0 /* AppControl.swift */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		F53A384B1F066F3B00F853D0 /* supporting_files */ = {
+			isa = PBXGroup;
+			children = (
+				F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */,
+				F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */,
+				F53A38181F04524B00F853D0 /* AppDelegate.swift */,
 				F53A38221F04524B00F853D0 /* Assets.xcassets */,
 				F53A38241F04524B00F853D0 /* LaunchScreen.storyboard */,
 				F53A38271F04524B00F853D0 /* Info.plist */,
 				F53A381F1F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld */,
 			);
-			path = CreatiBoxApp;
+			name = supporting_files;
+			sourceTree = "<group>";
+		};
+		F5A8B9DC1F085C8100F26A79 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F50F25FA1F0B51E30093ACB2 /* supervisor */,
+				F50F25D71F0B37BB0093ACB2 /* cells */,
+				F53A381A1F04524B00F853D0 /* MainVC.swift */,
+				F5A8B9DD1F085C9C00F26A79 /* SelectBranchOfficeVC.swift */,
+				F51D021F1F086C42003DE5E0 /* PromontionPersonVC.swift */,
+				F51332131F097A2600C26CFD /* GameVC.swift */,
+				F50F25D31F0A5F4E0093ACB2 /* SupervisorVC.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		F5CDDE331F07E47800F1E056 /* CreatiBoxAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDDE341F07E47800F1E056 /* CreatiBoxAppTests.swift */,
+				F5CDDE361F07E47800F1E056 /* Info.plist */,
+			);
+			path = CreatiBoxAppTests;
+			sourceTree = "<group>";
+		};
+		F5CDDE3C1F07E4ED00F1E056 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDDE3E1F07E52300F1E056 /* CreatiBoxType.swift */,
+			);
+			name = protocols;
+			sourceTree = "<group>";
+		};
+		F5CDDE3D1F07E4F600F1E056 /* implementation */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDDE401F07E5AC00F1E056 /* CreatiBoxAppImpl.swift */,
+			);
+			name = implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +281,24 @@
 			productReference = F53A38151F04524B00F853D0 /* CreatiBoxApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F5CDDE311F07E47800F1E056 /* CreatiBoxAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CDDE3B1F07E47800F1E056 /* Build configuration list for PBXNativeTarget "CreatiBoxAppTests" */;
+			buildPhases = (
+				F5CDDE2E1F07E47800F1E056 /* Sources */,
+				F5CDDE2F1F07E47800F1E056 /* Frameworks */,
+				F5CDDE301F07E47800F1E056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5CDDE381F07E47800F1E056 /* PBXTargetDependency */,
+			);
+			name = CreatiBoxAppTests;
+			productName = CreatiBoxAppTests;
+			productReference = F5CDDE321F07E47800F1E056 /* CreatiBoxAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +313,12 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7XYHS53D2W;
 						ProvisioningStyle = Automatic;
+					};
+					F5CDDE311F07E47800F1E056 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7XYHS53D2W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F53A38141F04524B00F853D0;
 					};
 				};
 			};
@@ -118,6 +336,7 @@
 			projectRoot = "";
 			targets = (
 				F53A38141F04524B00F853D0 /* CreatiBoxApp */,
+				F5CDDE311F07E47800F1E056 /* CreatiBoxAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,8 +347,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53A38261F04524B00F853D0 /* LaunchScreen.storyboard in Resources */,
+				F50F25DB1F0B3B780093ACB2 /* pulp fiction m54.ttf in Resources */,
+				F50F25D61F0B30EB0093ACB2 /* Saloon Girl Fill.ttf in Resources */,
 				F53A38231F04524B00F853D0 /* Assets.xcassets in Resources */,
 				F53A381E1F04524B00F853D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CDDE301F07E47800F1E056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,13 +368,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CDDE591F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift in Sources */,
+				F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */,
+				F53A38401F06664600F853D0 /* CoreDataHelper.swift in Sources */,
 				F53A38211F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld in Sources */,
-				F53A381B1F04524B00F853D0 /* ViewController.swift in Sources */,
+				F53A38441F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift in Sources */,
+				F51D021E1F086739003DE5E0 /* UIViewControllerExtension.swift in Sources */,
+				F5CDDE571F08027C00F1E056 /* Prize+CoreDataProperties.swift in Sources */,
+				F53A381B1F04524B00F853D0 /* MainVC.swift in Sources */,
+				F50F25D41F0A5F4E0093ACB2 /* SupervisorVC.swift in Sources */,
+				F51332141F097A2600C26CFD /* GameVC.swift in Sources */,
+				F53A38481F066C0E00F853D0 /* AppExceptions.swift in Sources */,
+				F53A384A1F066C8400F853D0 /* InitialDataCreatorHelper.swift in Sources */,
+				F5CDDE3F1F07E52300F1E056 /* CreatiBoxType.swift in Sources */,
+				F5CDDE411F07E5AC00F1E056 /* CreatiBoxAppImpl.swift in Sources */,
+				F50F25D91F0B3B000093ACB2 /* BranchOfficeTVC.swift in Sources */,
+				F53A38431F066A3A00F853D0 /* LoginUser+CoreDataClass.swift in Sources */,
+				F5CDDE5A1F08027C00F1E056 /* Winner+CoreDataClass.swift in Sources */,
+				F5CDDE5B1F08027C00F1E056 /* Winner+CoreDataProperties.swift in Sources */,
+				F50F26011F0BB12A0093ACB2 /* StockTVC.swift in Sources */,
+				F50F25FC1F0B52040093ACB2 /* ReportVC.swift in Sources */,
+				F5CDDE561F08027C00F1E056 /* Prize+CoreDataClass.swift in Sources */,
+				F5CDDE601F083B3700F1E056 /* DateHelper.swift in Sources */,
+				F5A8B9DE1F085C9C00F26A79 /* SelectBranchOfficeVC.swift in Sources */,
+				F51D021B1F0866D3003DE5E0 /* AppControl.swift in Sources */,
+				F5CDDE581F08027C00F1E056 /* BranchOffice+CoreDataClass.swift in Sources */,
+				F51D02201F086C42003DE5E0 /* PromontionPersonVC.swift in Sources */,
+				F50F25FF1F0BAC120093ACB2 /* ReportType.swift in Sources */,
 				F53A38191F04524B00F853D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5CDDE2E1F07E47800F1E056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CDDE351F07E47800F1E056 /* CreatiBoxAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5CDDE381F07E47800F1E056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F53A38141F04524B00F853D0 /* CreatiBoxApp */;
+			targetProxy = F5CDDE371F07E47800F1E056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F53A381C1F04524B00F853D0 /* Main.storyboard */ = {
@@ -289,6 +558,34 @@
 			};
 			name = Release;
 		};
+		F5CDDE391F07E47800F1E056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7XYHS53D2W;
+				INFOPLIST_FILE = CreatiBoxAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreatiBoxApp.app/CreatiBoxApp";
+			};
+			name = Debug;
+		};
+		F5CDDE3A1F07E47800F1E056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7XYHS53D2W;
+				INFOPLIST_FILE = CreatiBoxAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreatiBoxApp.app/CreatiBoxApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -308,6 +605,16 @@
 				F53A382C1F04524B00F853D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5CDDE3B1F07E47800F1E056 /* Build configuration list for PBXNativeTarget "CreatiBoxAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CDDE391F07E47800F1E056 /* Debug */,
+				F5CDDE3A1F07E47800F1E056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -315,9 +622,10 @@
 		F53A381F1F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */,
 				F53A38201F04524B00F853D0 /* CreatiBoxApp.xcdatamodel */,
 			);
-			currentVersion = F53A38201F04524B00F853D0 /* CreatiBoxApp.xcdatamodel */;
+			currentVersion = F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */;
 			path = CreatiBoxApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
