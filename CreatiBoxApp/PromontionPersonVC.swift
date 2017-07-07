@@ -17,11 +17,16 @@ class PromontionPersonVC: UIViewController {
     @IBOutlet weak var winnerNif: UITextField!
     private let creatiBoxImpl = CreatiBoxAppImpl()
     private let alertViewHelper = AlertViewHelper.sharedInstance
+    @IBOutlet weak var branchOfficeLBL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
     }
     
+    func configureView(){
+        branchOfficeLBL.text = getCurrentBranchOfficeText()
+    }
     
     @IBAction func comeBackFromGameScreen(segue : UIStoryboardSegue){
         winnerName.text = ""

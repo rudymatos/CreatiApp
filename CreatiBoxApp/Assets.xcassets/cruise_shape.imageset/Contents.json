@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Table Cell Background.png",
+      "filename" : "CriuseShape.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Table Cell Background@2x.png",
+      "filename" : "CriuseShape@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Table Cell Background@3x.png",
+      "filename" : "CriuseShape@3x.png",
       "scale" : "3x"
     }
   ],

@@ -15,13 +15,11 @@ class MainVC: UIViewController {
     
     private let creatiBoxImpl = CreatiBoxAppImpl()
     private let alertViewHelper = AlertViewHelper.sharedInstance
-    private var currentUser : LoginUser?
     private let initDateHelper = InitialDataCreatorHelper.sharedInstance
-    private var branchOfficeList : [BranchOffice]?
+    private let dateHelper = DateHelper.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        initDateHelper.createPrizes()
     }
     
     
@@ -31,13 +29,16 @@ class MainVC: UIViewController {
     @IBAction func login(_ sender: UIButton) {
         if let currentUsername = username.text, let currentPassword = password.text , currentUsername != "" && currentPassword != ""{
             do{
-                currentUser = try creatiBoxImpl.login(username: currentUsername, password: currentPassword)
-                if currentUser?.type == LoginUser.userType.supervisor.rawValue{
-                    branchOfficeList = try creatiBoxImpl.getAllBranchOfficesByDate(date: Date(),authorized: false)
+                let currentUser = try creatiBoxImpl.login(username: currentUsername, password: currentPassword)
+                let userType = LoginUser.UserType(rawValue: currentUser.type)!
+                let currentBranchOffice = try creatiBoxImpl.getBranchOfficeFromLoginUser(supervisor: userType.isSupervisor() ? currentUser : currentUser.supervisor!)
+                getAppControl().currentUser = currentUser
+                getAppControl().currentBranchOffice = currentBranchOffice
+                if userType.isSupervisor(){
+                    performSegue(withIdentifier: "supervisorSegue", sender: nil)
                 }else{
-                    branchOfficeList = try creatiBoxImpl.getAllBranchOfficesByDate(date: Date(),authorized: true)
+                    performSegue(withIdentifier: "promotionPersonSegue", sender: nil)
                 }
-                performSegue(withIdentifier: "selectBranchOfficeSegue", sender: nil)
             }catch LoginExceptions.InvalidUsernameOrPassword(let message){
                 alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Error Autenticando", message: message ?? "Usuario y Contrasena incorrectos")
             }catch CleanDataException.NoBranchOfficeFound{
@@ -49,14 +50,6 @@ class MainVC: UIViewController {
             alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Error Autenticando", message: "Asegurese de que haya introducido el nombre de usuario y la contrasena")
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectBranchOfficeSegue"{
-            getAppControl().branchOfficeList = branchOfficeList
-            getAppControl().currentUser = currentUser
-        }
-    }
-    
     
 }
 

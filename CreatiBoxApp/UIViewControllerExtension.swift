@@ -15,8 +15,16 @@ extension UIViewController{
         return AppControl.sharedInstance
     }
     
+    func getCurrentBranchOfficeText() -> String{
+        var branchOfficeName = "NO ENCONTRADO"
+        if let branchOffice = getAppControl().currentBranchOffice{
+         branchOfficeName = "\(branchOffice.name) \(branchOffice.address)"
+        }
+        return branchOfficeName
+    }
+    
+    
     func logout(){
-        getAppControl().branchOfficeList = nil
         getAppControl().currentBranchOffice = nil
         getAppControl().currentPrize = nil
         getAppControl().currentUser = nil

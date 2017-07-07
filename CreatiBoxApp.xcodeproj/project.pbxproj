@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F50F25D41F0A5F4E0093ACB2 /* SupervisorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25D31F0A5F4E0093ACB2 /* SupervisorVC.swift */; };
 		F50F25D61F0B30EB0093ACB2 /* Saloon Girl Fill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */; };
-		F50F25D91F0B3B000093ACB2 /* BranchOfficeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25D81F0B3B000093ACB2 /* BranchOfficeTVC.swift */; };
 		F50F25DB1F0B3B780093ACB2 /* pulp fiction m54.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */; };
 		F50F25FC1F0B52040093ACB2 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25FB1F0B52040093ACB2 /* ReportVC.swift */; };
 		F50F25FF1F0BAC120093ACB2 /* ReportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F25FE1F0BAC120093ACB2 /* ReportType.swift */; };
@@ -25,21 +24,22 @@
 		F53A38231F04524B00F853D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53A38221F04524B00F853D0 /* Assets.xcassets */; };
 		F53A38261F04524B00F853D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53A38241F04524B00F853D0 /* LaunchScreen.storyboard */; };
 		F53A38401F06664600F853D0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A383F1F06664600F853D0 /* CoreDataHelper.swift */; };
-		F53A38431F066A3A00F853D0 /* LoginUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38411F066A3A00F853D0 /* LoginUser+CoreDataClass.swift */; };
-		F53A38441F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38421F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift */; };
 		F53A38481F066C0E00F853D0 /* AppExceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38471F066C0E00F853D0 /* AppExceptions.swift */; };
 		F53A384A1F066C8400F853D0 /* InitialDataCreatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */; };
-		F5A8B9DE1F085C9C00F26A79 /* SelectBranchOfficeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8B9DD1F085C9C00F26A79 /* SelectBranchOfficeVC.swift */; };
+		F5A9F2481F0EF73A00802D2F /* Winner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F23E1F0EF73A00802D2F /* Winner+CoreDataClass.swift */; };
+		F5A9F2491F0EF73A00802D2F /* Winner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F23F1F0EF73A00802D2F /* Winner+CoreDataProperties.swift */; };
+		F5A9F24A1F0EF73A00802D2F /* Prize+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2401F0EF73A00802D2F /* Prize+CoreDataClass.swift */; };
+		F5A9F24B1F0EF73A00802D2F /* Prize+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2411F0EF73A00802D2F /* Prize+CoreDataProperties.swift */; };
+		F5A9F24C1F0EF73A00802D2F /* BranchOffice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2421F0EF73A00802D2F /* BranchOffice+CoreDataClass.swift */; };
+		F5A9F24D1F0EF73A00802D2F /* BranchOffice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2431F0EF73A00802D2F /* BranchOffice+CoreDataProperties.swift */; };
+		F5A9F24E1F0EF73A00802D2F /* LoginUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2441F0EF73A00802D2F /* LoginUser+CoreDataClass.swift */; };
+		F5A9F24F1F0EF73A00802D2F /* LoginUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2451F0EF73A00802D2F /* LoginUser+CoreDataProperties.swift */; };
+		F5A9F2501F0EF73A00802D2F /* Visit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2461F0EF73A00802D2F /* Visit+CoreDataClass.swift */; };
+		F5A9F2511F0EF73A00802D2F /* Visit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2471F0EF73A00802D2F /* Visit+CoreDataProperties.swift */; };
 		F5CDDE351F07E47800F1E056 /* CreatiBoxAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE341F07E47800F1E056 /* CreatiBoxAppTests.swift */; };
 		F5CDDE3F1F07E52300F1E056 /* CreatiBoxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE3E1F07E52300F1E056 /* CreatiBoxType.swift */; };
 		F5CDDE411F07E5AC00F1E056 /* CreatiBoxAppImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE401F07E5AC00F1E056 /* CreatiBoxAppImpl.swift */; };
 		F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */; };
-		F5CDDE561F08027C00F1E056 /* Prize+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE501F08027C00F1E056 /* Prize+CoreDataClass.swift */; };
-		F5CDDE571F08027C00F1E056 /* Prize+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE511F08027C00F1E056 /* Prize+CoreDataProperties.swift */; };
-		F5CDDE581F08027C00F1E056 /* BranchOffice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE521F08027C00F1E056 /* BranchOffice+CoreDataClass.swift */; };
-		F5CDDE591F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE531F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift */; };
-		F5CDDE5A1F08027C00F1E056 /* Winner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE541F08027C00F1E056 /* Winner+CoreDataClass.swift */; };
-		F5CDDE5B1F08027C00F1E056 /* Winner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE551F08027C00F1E056 /* Winner+CoreDataProperties.swift */; };
 		F5CDDE601F083B3700F1E056 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,6 @@
 /* Begin PBXFileReference section */
 		F50F25D31F0A5F4E0093ACB2 /* SupervisorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupervisorVC.swift; sourceTree = "<group>"; };
 		F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saloon Girl Fill.ttf"; sourceTree = "<group>"; };
-		F50F25D81F0B3B000093ACB2 /* BranchOfficeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchOfficeTVC.swift; sourceTree = "<group>"; };
 		F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pulp fiction m54.ttf"; sourceTree = "<group>"; };
 		F50F25FB1F0B52040093ACB2 /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		F50F25FE1F0BAC120093ACB2 /* ReportType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportType.swift; sourceTree = "<group>"; };
@@ -74,23 +73,24 @@
 		F53A38251F04524B00F853D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F53A38271F04524B00F853D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F53A383F1F06664600F853D0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		F53A38411F066A3A00F853D0 /* LoginUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F53A38421F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F53A38471F066C0E00F853D0 /* AppExceptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExceptions.swift; sourceTree = "<group>"; };
 		F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialDataCreatorHelper.swift; sourceTree = "<group>"; };
-		F5A8B9DD1F085C9C00F26A79 /* SelectBranchOfficeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBranchOfficeVC.swift; sourceTree = "<group>"; };
+		F5A9F23E1F0EF73A00802D2F /* Winner+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5A9F23F1F0EF73A00802D2F /* Winner+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5A9F2401F0EF73A00802D2F /* Prize+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5A9F2411F0EF73A00802D2F /* Prize+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5A9F2421F0EF73A00802D2F /* BranchOffice+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BranchOffice+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5A9F2431F0EF73A00802D2F /* BranchOffice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BranchOffice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5A9F2441F0EF73A00802D2F /* LoginUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5A9F2451F0EF73A00802D2F /* LoginUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F5A9F2461F0EF73A00802D2F /* Visit+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Visit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F5A9F2471F0EF73A00802D2F /* Visit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Visit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F5CDDE321F07E47800F1E056 /* CreatiBoxAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreatiBoxAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDDE341F07E47800F1E056 /* CreatiBoxAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatiBoxAppTests.swift; sourceTree = "<group>"; };
 		F5CDDE361F07E47800F1E056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CDDE3E1F07E52300F1E056 /* CreatiBoxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatiBoxType.swift; sourceTree = "<group>"; };
 		F5CDDE401F07E5AC00F1E056 /* CreatiBoxAppImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatiBoxAppImpl.swift; sourceTree = "<group>"; };
 		F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewHelper.swift; sourceTree = "<group>"; };
-		F5CDDE501F08027C00F1E056 /* Prize+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F5CDDE511F08027C00F1E056 /* Prize+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F5CDDE521F08027C00F1E056 /* BranchOffice+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BranchOffice+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F5CDDE531F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BranchOffice+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F5CDDE541F08027C00F1E056 /* Winner+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F5CDDE551F08027C00F1E056 /* Winner+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CreatiBoxApp v1.0.xcdatamodel"; sourceTree = "<group>"; };
 		F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +116,6 @@
 		F50F25D71F0B37BB0093ACB2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				F50F25D81F0B3B000093ACB2 /* BranchOfficeTVC.swift */,
 				F50F26001F0BB12A0093ACB2 /* StockTVC.swift */,
 			);
 			name = cells;
@@ -183,14 +182,16 @@
 		F53A382D1F06655F00F853D0 /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				F5CDDE501F08027C00F1E056 /* Prize+CoreDataClass.swift */,
-				F5CDDE511F08027C00F1E056 /* Prize+CoreDataProperties.swift */,
-				F5CDDE521F08027C00F1E056 /* BranchOffice+CoreDataClass.swift */,
-				F5CDDE531F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift */,
-				F5CDDE541F08027C00F1E056 /* Winner+CoreDataClass.swift */,
-				F5CDDE551F08027C00F1E056 /* Winner+CoreDataProperties.swift */,
-				F53A38411F066A3A00F853D0 /* LoginUser+CoreDataClass.swift */,
-				F53A38421F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift */,
+				F5A9F23E1F0EF73A00802D2F /* Winner+CoreDataClass.swift */,
+				F5A9F23F1F0EF73A00802D2F /* Winner+CoreDataProperties.swift */,
+				F5A9F2401F0EF73A00802D2F /* Prize+CoreDataClass.swift */,
+				F5A9F2411F0EF73A00802D2F /* Prize+CoreDataProperties.swift */,
+				F5A9F2421F0EF73A00802D2F /* BranchOffice+CoreDataClass.swift */,
+				F5A9F2431F0EF73A00802D2F /* BranchOffice+CoreDataProperties.swift */,
+				F5A9F2441F0EF73A00802D2F /* LoginUser+CoreDataClass.swift */,
+				F5A9F2451F0EF73A00802D2F /* LoginUser+CoreDataProperties.swift */,
+				F5A9F2461F0EF73A00802D2F /* Visit+CoreDataClass.swift */,
+				F5A9F2471F0EF73A00802D2F /* Visit+CoreDataProperties.swift */,
 			);
 			name = entities;
 			sourceTree = "<group>";
@@ -228,7 +229,6 @@
 				F50F25FA1F0B51E30093ACB2 /* supervisor */,
 				F50F25D71F0B37BB0093ACB2 /* cells */,
 				F53A381A1F04524B00F853D0 /* MainVC.swift */,
-				F5A8B9DD1F085C9C00F26A79 /* SelectBranchOfficeVC.swift */,
 				F51D021F1F086C42003DE5E0 /* PromontionPersonVC.swift */,
 				F51332131F097A2600C26CFD /* GameVC.swift */,
 				F50F25D31F0A5F4E0093ACB2 /* SupervisorVC.swift */,
@@ -368,33 +368,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5CDDE591F08027C00F1E056 /* BranchOffice+CoreDataProperties.swift in Sources */,
+				F5A9F2501F0EF73A00802D2F /* Visit+CoreDataClass.swift in Sources */,
+				F5A9F24F1F0EF73A00802D2F /* LoginUser+CoreDataProperties.swift in Sources */,
 				F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */,
 				F53A38401F06664600F853D0 /* CoreDataHelper.swift in Sources */,
 				F53A38211F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld in Sources */,
-				F53A38441F066A3A00F853D0 /* LoginUser+CoreDataProperties.swift in Sources */,
 				F51D021E1F086739003DE5E0 /* UIViewControllerExtension.swift in Sources */,
-				F5CDDE571F08027C00F1E056 /* Prize+CoreDataProperties.swift in Sources */,
 				F53A381B1F04524B00F853D0 /* MainVC.swift in Sources */,
 				F50F25D41F0A5F4E0093ACB2 /* SupervisorVC.swift in Sources */,
 				F51332141F097A2600C26CFD /* GameVC.swift in Sources */,
 				F53A38481F066C0E00F853D0 /* AppExceptions.swift in Sources */,
+				F5A9F24E1F0EF73A00802D2F /* LoginUser+CoreDataClass.swift in Sources */,
 				F53A384A1F066C8400F853D0 /* InitialDataCreatorHelper.swift in Sources */,
 				F5CDDE3F1F07E52300F1E056 /* CreatiBoxType.swift in Sources */,
+				F5A9F2511F0EF73A00802D2F /* Visit+CoreDataProperties.swift in Sources */,
+				F5A9F2491F0EF73A00802D2F /* Winner+CoreDataProperties.swift in Sources */,
 				F5CDDE411F07E5AC00F1E056 /* CreatiBoxAppImpl.swift in Sources */,
-				F50F25D91F0B3B000093ACB2 /* BranchOfficeTVC.swift in Sources */,
-				F53A38431F066A3A00F853D0 /* LoginUser+CoreDataClass.swift in Sources */,
-				F5CDDE5A1F08027C00F1E056 /* Winner+CoreDataClass.swift in Sources */,
-				F5CDDE5B1F08027C00F1E056 /* Winner+CoreDataProperties.swift in Sources */,
+				F5A9F2481F0EF73A00802D2F /* Winner+CoreDataClass.swift in Sources */,
 				F50F26011F0BB12A0093ACB2 /* StockTVC.swift in Sources */,
 				F50F25FC1F0B52040093ACB2 /* ReportVC.swift in Sources */,
-				F5CDDE561F08027C00F1E056 /* Prize+CoreDataClass.swift in Sources */,
+				F5A9F24A1F0EF73A00802D2F /* Prize+CoreDataClass.swift in Sources */,
 				F5CDDE601F083B3700F1E056 /* DateHelper.swift in Sources */,
-				F5A8B9DE1F085C9C00F26A79 /* SelectBranchOfficeVC.swift in Sources */,
 				F51D021B1F0866D3003DE5E0 /* AppControl.swift in Sources */,
-				F5CDDE581F08027C00F1E056 /* BranchOffice+CoreDataClass.swift in Sources */,
 				F51D02201F086C42003DE5E0 /* PromontionPersonVC.swift in Sources */,
 				F50F25FF1F0BAC120093ACB2 /* ReportType.swift in Sources */,
+				F5A9F24C1F0EF73A00802D2F /* BranchOffice+CoreDataClass.swift in Sources */,
+				F5A9F24D1F0EF73A00802D2F /* BranchOffice+CoreDataProperties.swift in Sources */,
+				F5A9F24B1F0EF73A00802D2F /* Prize+CoreDataProperties.swift in Sources */,
 				F53A38191F04524B00F853D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7XYHS53D2W;
 				INFOPLIST_FILE = CreatiBoxApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7XYHS53D2W;
 				INFOPLIST_FILE = CreatiBoxApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

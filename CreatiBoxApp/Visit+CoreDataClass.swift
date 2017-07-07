@@ -1,5 +1,5 @@
 //
-//  Winner+CoreDataClass.swift
+//  Visit+CoreDataClass.swift
 //  CreatiBoxApp
 //
 //  Created by Rudy E Matos on 7/6/17.
@@ -9,10 +9,9 @@
 import Foundation
 import CoreData
 
-@objc(Winner)
-public class Winner: NSManagedObject {
+@objc(Visit)
+public class Visit: NSManagedObject {
 
-    static let className = "Winner"
-    
+    static let className = "Visit"
     
 }

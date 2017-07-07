@@ -16,18 +16,18 @@ class DateHelper{
         
     }
     
-    func getStartOrEndDate(forDate : Date = Date(), start : Bool = true) -> NSDate{
+    func getStartOrEndDate(forDate : Date = Date(), start : Bool = true) -> Date{
         var calendar = Calendar.current
         calendar.timeZone = TimeZone.current
         let date = calendar.startOfDay(for: forDate)
         
         if start{
-            return date as NSDate
+            return date
         }
         
         var component = calendar.dateComponents([.year, .month, .day, .minute, .second], from: date)
         component.day! += 1
-        return calendar.date(from: component)! as NSDate
+        return calendar.date(from: component)!
     }
     
     

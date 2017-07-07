@@ -14,7 +14,6 @@ class AppControl{
     
     var currentUser : LoginUser?
     var currentBranchOffice : BranchOffice?
-    var branchOfficeList : [BranchOffice]?
     var currentUserPlaying : Winner?
     var currentPrize: Prize?
     

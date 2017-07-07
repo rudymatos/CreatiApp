@@ -12,6 +12,7 @@ class SupervisorVC: UIViewController {
 
     private let alertViewHelper = AlertViewHelper.sharedInstance
     @IBOutlet weak var authorizedExtraStockButton: UIButton!
+    @IBOutlet weak var branchOfficeLBL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class SupervisorVC: UIViewController {
 
     
     func configureView(){
+        branchOfficeLBL.text = getCurrentBranchOfficeText()
         //if there is an authorizable stock show button
 //        authorizedExtraStockButton.alpha = 0
     }

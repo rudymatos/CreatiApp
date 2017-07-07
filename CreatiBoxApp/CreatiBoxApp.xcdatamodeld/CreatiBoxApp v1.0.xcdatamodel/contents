@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BranchOffice" representedClassName="BranchOffice" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="prizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="branchOffice" inverseEntity="Prize" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="givenPrizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="givenAt" inverseEntity="Prize" syncable="YES"/>
+        <relationship name="visits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Visit" inverseName="branchOffice" inverseEntity="Visit" syncable="YES"/>
     </entity>
     <entity name="LoginUser" representedClassName=".LoginUser" syncable="YES">
         <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="authorizedPrizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="authorizedBy" inverseEntity="Prize" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
         <relationship name="givenPrizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="givenBy" inverseEntity="Prize" syncable="YES"/>
+        <relationship name="supervisor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginUser" inverseName="supervisor" inverseEntity="LoginUser" syncable="YES"/>
+        <relationship name="visits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Visit" inverseName="visitor" inverseEntity="Visit" syncable="YES"/>
     </entity>
     <entity name="Prize" representedClassName="Prize" syncable="YES">
-        <attribute name="authorized" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="redeemed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="authorizedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginUser" inverseName="authorizedPrizes" inverseEntity="LoginUser" syncable="YES"/>
-        <relationship name="branchOffice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BranchOffice" inverseName="prizes" inverseEntity="BranchOffice" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="givenAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BranchOffice" inverseName="givenPrizes" inverseEntity="BranchOffice" syncable="YES"/>
         <relationship name="givenBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginUser" inverseName="givenPrizes" inverseEntity="LoginUser" syncable="YES"/>
+        <relationship name="visit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Visit" inverseName="prizes" inverseEntity="Visit" syncable="YES"/>
         <relationship name="winner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Winner" inverseName="prizes" inverseEntity="Winner" syncable="YES"/>
+    </entity>
+    <entity name="Visit" representedClassName="Visit" syncable="YES">
+        <attribute name="authorized" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="branchOffice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BranchOffice" inverseName="visits" inverseEntity="BranchOffice" syncable="YES"/>
+        <relationship name="prizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="visit" inverseEntity="Prize" syncable="YES"/>
+        <relationship name="visitor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginUser" inverseName="visits" inverseEntity="LoginUser" syncable="YES"/>
     </entity>
     <entity name="Winner" representedClassName="Winner" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="nif" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="prizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="winner" inverseEntity="Prize" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BranchOffice" positionX="-765" positionY="27" width="128" height="103"/>
-        <element name="LoginUser" positionX="-317" positionY="-36" width="128" height="133"/>
-        <element name="Prize" positionX="-522" positionY="189" width="128" height="195"/>
-        <element name="Winner" positionX="-972" positionY="227" width="128" height="133"/>
+        <element name="BranchOffice" positionX="-1053" positionY="-189" width="128" height="118"/>
+        <element name="LoginUser" positionX="-972" positionY="378" width="128" height="148"/>
+        <element name="Prize" positionX="-774" positionY="-76" width="128" height="148"/>
+        <element name="Winner" positionX="-578" positionY="207" width="128" height="133"/>
+        <element name="Visit" positionX="-1242" positionY="-9" width="128" height="118"/>
     </elements>
 </model>

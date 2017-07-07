@@ -65,30 +65,6 @@ public class CoreDataHelper{
         }
     }
     
-    
-    func getPrizes(forDate : Date, byBranchOffice: BranchOffice)throws -> [Prize]{
-        
-        let request : NSFetchRequest<Prize> = Prize.fetchRequest()
-        let startDate = dateHelper.getStartOrEndDate(forDate: forDate)
-        let endDate = dateHelper.getStartOrEndDate(forDate: forDate, start: false)
-        
-        if let branchName = byBranchOffice.name, let branchAddress = byBranchOffice.address{
-            request.predicate = NSPredicate(format: "branchOffice.name = %@ and branchOffice.address = %@ and date >= %@ and date < %@", branchName, branchAddress, startDate, endDate)
-            do{
-                let results =  try managedObjectContext.fetch(request)
-                if results.count > 0 {
-                 return results
-                }
-                throw CoreDataExceptions.DataNotFound
-            }catch{
-                throw CoreDataExceptions.DataNotFound
-            }
-        }else{
-            throw CoreDataExceptions.DataNotFound
-        }
-    }
-    
-    
     func getUserByUsernameAndPassword(username : String, password: String)throws -> LoginUser{
         let request : NSFetchRequest<LoginUser> = LoginUser.fetchRequest()
         request.predicate = NSPredicate(format: "username = %@ and password = %@", username, password)
@@ -107,16 +83,19 @@ public class CoreDataHelper{
 }
 
 
-//creation helper
 extension CoreDataHelper{
     
-    func createLoginUser(displayName: String, username: String, password: String, userType : LoginUser.userType){
+    func createLoginUser(displayName: String, username: String, password: String, userType : LoginUser.UserType, supervisor : LoginUser?) -> LoginUser{
         let loginUser = createObjectContext(entityName: LoginUser.className) as! LoginUser
         loginUser.username = username
         loginUser.displayName = displayName
         loginUser.type = userType.rawValue
         loginUser.password = password
+        if let supervisor = supervisor {
+            loginUser.supervisor = supervisor
+        }
         self.saveContext()
+        return loginUser
     }
     
     func createBranchOffice(name : String, address: String, image: String){
@@ -126,6 +105,18 @@ extension CoreDataHelper{
         branchOffice.image = image
         self.saveContext()
     }
+    
+    func createVisit(date: Date , branchOffice: BranchOffice, visitor: LoginUser, prizes : [Prize]) -> Visit{
+        let visit = createObjectContext(entityName: Visit.className) as! Visit
+        visit.date = date as NSDate
+        visit.branchOffice = branchOffice
+        visit.visitor = visitor
+        visit.prizes = NSSet(array: prizes)
+        self.saveContext()
+        return visit
+    }
+    
+    
     
     func createWinner(name: String, id: String?, email: String?, phone: String?, nif : String?) -> Winner{
         let player = createObjectContext(entityName: Winner.className) as! Winner
@@ -138,33 +129,13 @@ extension CoreDataHelper{
         return player
     }
     
-    func createPrize(name: String, type: Prize.PrizeType, date : Date = Date(), authorized: Bool = true, branchOffice : BranchOffice){
+    func createPrize(name: String, type: Prize.PrizeType, date : Date = Date(), authorized: Bool = true, branchOffice : BranchOffice) -> Prize{
         let prize = createObjectContext(entityName: Prize.className) as! Prize
         prize.name = name
-        prize.image = type.rawValue
         prize.type = type.rawValue
-        prize.date = NSDate()
-        prize.authorized = authorized
         prize.redeemed = false
-        prize.branchOffice = branchOffice
         self.saveContext()
+        return prize
     }
-    
-    
-    //method was created for the unitest
-    func removeUserFromDB(username: String){
-        let request : NSFetchRequest<LoginUser> = LoginUser.fetchRequest()
-        request.predicate = NSPredicate(format: "username = %@", username)
-        request.fetchLimit = 1
-        do{
-            if let currentUser = try managedObjectContext.fetch(request).first{
-                managedObjectContext.delete(currentUser)
-                saveContext()
-            }
-        }catch let error as NSError{
-            print("Error deleting user with message : \(error.description)")
-        }
-    }
-    
 }
 

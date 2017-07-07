@@ -1,5 +1,5 @@
 //
-//  Winner+CoreDataProperties.swift
+//  Visit+CoreDataProperties.swift
 //  CreatiBoxApp
 //
 //  Created by Rudy E Matos on 7/6/17.
@@ -10,23 +10,22 @@ import Foundation
 import CoreData
 
 
-extension Winner {
+extension Visit {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Winner> {
-        return NSFetchRequest<Winner>(entityName: "Winner")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Visit> {
+        return NSFetchRequest<Visit>(entityName: "Visit")
     }
 
-    @NSManaged public var email: String?
-    @NSManaged public var id: String?
-    @NSManaged public var name: String
-    @NSManaged public var nif: String?
-    @NSManaged public var phone: String?
-    @NSManaged public var prizes: NSSet?
+    @NSManaged public var date: NSDate
+    @NSManaged public var authorized: Bool
+    @NSManaged public var branchOffice: BranchOffice
+    @NSManaged public var visitor: LoginUser
+    @NSManaged public var prizes: NSSet
 
 }
 
 // MARK: Generated accessors for prizes
-extension Winner {
+extension Visit {
 
     @objc(addPrizesObject:)
     @NSManaged public func addToPrizes(_ value: Prize)

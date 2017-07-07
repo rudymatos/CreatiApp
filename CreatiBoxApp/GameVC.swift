@@ -38,9 +38,9 @@ class GameVC: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        cardView1.transform = CGAffineTransform(translationX: -100, y: 0)
-        cardView2.transform = CGAffineTransform(translationX: 0, y: -100)
-        cardView3.transform = CGAffineTransform(translationX: 100, y: 0)
+        cardView1.transform = CGAffineTransform(translationX: -200, y: 0)
+        cardView2.transform = CGAffineTransform(translationX: -300, y: 0)
+        cardView3.transform = CGAffineTransform(translationX: -400, y: 0)
         
         UIView.animate(withDuration: 0.9, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [.curveEaseIn], animations: {
             self.cardView1.alpha = 1
@@ -85,7 +85,7 @@ class GameVC: UIViewController {
         if let currentView = sender.view{
             let imageView = currentView as! UIImageView
             UIView.transition(with: imageView, duration: 1, options: .transitionFlipFromRight, animations: {
-                if let imageName = self.currentPrize?.image{
+                if let imageName = self.currentPrize?.type{
                     imageView.image = UIImage(named: imageName)
                 }
             }, completion: {(completed) in

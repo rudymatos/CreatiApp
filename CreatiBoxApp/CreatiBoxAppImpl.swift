@@ -13,24 +13,25 @@ class CreatiBoxAppImpl : CreatiBoxType{
     private let coreDataHelper = CoreDataHelper.sharedInstance
     private let dateHelper = DateHelper.sharedInstance
     
-    func createUser(displayName : String, username: String, password: String,  userType : LoginUser.userType)throws{
-        if coreDataHelper.doesEntityExist(fetchRequest: LoginUser.fetchRequest(), query: "username = %@", params: [username]){
-            throw LoginExceptions.UserAlreadyExists
+    
+    func getBranchOfficeFromLoginUser(supervisor: LoginUser)throws -> BranchOffice{
+        if let currentVisit = supervisor.visits?.filter({ (value) -> Bool in
+            let currentDate = (value as! Visit).date as Date
+            let dateStart = dateHelper.getStartOrEndDate()
+            let dateEnd = dateHelper.getStartOrEndDate(start: false)
+            return currentDate >= dateStart && currentDate < dateEnd
+        }).first as? Visit{
+                return currentVisit.branchOffice
+        }else{
+            throw CleanDataException.NoBranchOfficeFound
         }
-        coreDataHelper.createLoginUser(displayName: displayName, username: username, password: password, userType: userType)
     }
     
-    func getPrizes(forDate: Date, byBranchOffice : BranchOffice, forReport: Bool = false)throws -> [Prize]{
-        if let bOName = byBranchOffice.name, let bOAddress = byBranchOffice.address{
-            let startDate = dateHelper.getStartOrEndDate(forDate: Date())
-            let endDate = dateHelper.getStartOrEndDate(forDate: Date(), start: false)
-            
-            let availablePrizesForToday = try coreDataHelper.getEntityByParam(fetchRequest: Prize.fetchRequest(), query: "branchOffice.name = %@ and branchOffice.address = %@ and date >= %@ and date < %@ \(!forReport ? "and authorized = YES and redeemed = NO" : "")", params: [bOName, bOAddress,startDate,endDate])
-            
-            return availablePrizesForToday
-        }
-        throw CleanDataException.InvalidData(message: "Data Invalida. Sucursal sin nombre o sin Direccion")
-        
+    func getPrizes(forDate: Date, byBranchOffice : BranchOffice, forReport: Bool = false) -> [Prize]{
+        let startDate = dateHelper.getStartOrEndDate(forDate: Date())
+        let endDate = dateHelper.getStartOrEndDate(forDate: Date(), start: false)
+        let availablePrizesForToday = try! coreDataHelper.getEntityByParam(fetchRequest: Prize.fetchRequest(), query: "branchOffice.name = %@ and branchOffice.address = %@ and date >= %@ and date < %@ \(!forReport ? "and authorized = YES and redeemed = NO" : "")", params: [byBranchOffice.name, byBranchOffice.address,startDate,endDate])
+        return availablePrizesForToday
     }
     
     func selectedRandomPrizeFromBranchOffice(branchOffice : BranchOffice)throws -> Prize{
@@ -68,14 +69,6 @@ class CreatiBoxAppImpl : CreatiBoxType{
     
     func createWinner(name: String, id: String?, email: String?, phone: String? ,nif: String?) -> Winner{
         return coreDataHelper.createWinner(name: name, id: id, email: email, phone: phone, nif: nif)
-    }
-    
-    func deleteUser(username : String)throws{
-        if !coreDataHelper.doesEntityExist(fetchRequest: LoginUser.fetchRequest(), query: "username = %@", params: [username]){
-            throw LoginExceptions.UserDoesntExist
-        }
-        coreDataHelper.removeUserFromDB(username: username)
-        
     }
     
     func login(username: String, password: String)throws -> LoginUser {
