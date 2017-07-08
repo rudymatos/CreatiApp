@@ -20,6 +20,8 @@ enum CleanDataException: Error{
     
     case NoBranchOfficeFound
     case NoPrizeFound
+    case NoAvailableVisits
+    case NoAuthorizedVisits
     case InvalidData(message : String)
     
     

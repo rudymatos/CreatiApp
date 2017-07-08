@@ -16,13 +16,15 @@ public class BranchOffice: NSManagedObject {
     
     enum BranchOfficeType : String{
         
-        case LaSirena = "la_sirena"
+        case LaSirena = "lasirena"
         case Bravo = "bravo"
         case Jumbo = "jumbo"
         case Pola = "pola"
         case Nacional = "nacional"
         
-        
+        func getLogoImageName() -> String{
+            return "logo_\(self.rawValue)"
+        }
     }
     
     

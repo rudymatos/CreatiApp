@@ -22,7 +22,7 @@ extension LoginUser {
     @NSManaged public var username: String
     @NSManaged public var givenPrizes: NSSet?
     @NSManaged public var supervisor: LoginUser?
-    @NSManaged public var visits: NSSet?
+    @NSManaged public var visits: NSSet
 
 }
 

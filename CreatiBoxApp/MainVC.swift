@@ -20,6 +20,9 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        initDateHelper.createUserLoginData()
+//        initDateHelper.createBranchOffices()
+//        try! initDateHelper.createPrizes()
     }
     
     
@@ -27,22 +30,59 @@ class MainVC: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
+        var visit : Visit!
         if let currentUsername = username.text, let currentPassword = password.text , currentUsername != "" && currentPassword != ""{
             do{
                 let currentUser = try creatiBoxImpl.login(username: currentUsername, password: currentPassword)
                 let userType = LoginUser.UserType(rawValue: currentUser.type)!
-                let currentBranchOffice = try creatiBoxImpl.getBranchOfficeFromLoginUser(supervisor: userType.isSupervisor() ? currentUser : currentUser.supervisor!)
                 getAppControl().currentUser = currentUser
-                getAppControl().currentBranchOffice = currentBranchOffice
-                if userType.isSupervisor(){
-                    performSegue(withIdentifier: "supervisorSegue", sender: nil)
+                
+                if userType.isSupervisor() {
+                    do{
+                        visit = try creatiBoxImpl.getVisit(bySupervisor: userType.isSupervisor() ? currentUser : currentUser.supervisor!)
+                        getAppControl().currentVisit = visit
+                        performSegue(withIdentifier: "supervisorSegue", sender: nil)
+                    }catch CleanDataException.NoAvailableVisits{
+                        let access = UIAlertAction(title: "Acceder", style: .default, handler: { (action) in
+                            self.performSegue(withIdentifier: "supervisorSegue", sender: nil)
+                        })
+                        let dismiss = UIAlertAction(title: "No gracias", style: .default, handler:nil)
+                        alertViewHelper.createGenericMessage(showOnVC: self, title: "Visita no Disponible", message: "No existen visitas disponibles para el dia de hoy. Desea acceder al sistema de todas formas?", buttons: [access, dismiss])
+                    }
                 }else{
-                    performSegue(withIdentifier: "promotionPersonSegue", sender: nil)
+                    visit = try creatiBoxImpl.getVisit(bySupervisor: userType.isSupervisor() ? currentUser : currentUser.supervisor!)
+                    if creatiBoxImpl.doesVisitHaveAvailablePrizes(visit: visit){
+                        print("using original visit")
+                        getAppControl().currentVisit = visit
+                        performSegue(withIdentifier: "promotionPersonSegue", sender: nil)
+                    }else{
+                        print("using next visit")
+                        let nextVisit = try creatiBoxImpl.getVisit(bySupervisor: currentUser.supervisor!, nextAvailableVisit: true)
+                        
+                        if !nextVisit.authorized{
+                            throw CleanDataException.NoAuthorizedVisits
+                        }
+                        
+                        if creatiBoxImpl.doesVisitHaveAvailablePrizes(visit: nextVisit){
+                            getAppControl().usingStockFromDifferrentBranchOffice = true
+                            getAppControl().originalVisit = visit
+                            getAppControl().currentVisit = nextVisit
+                            performSegue(withIdentifier: "promotionPersonSegue", sender: nil)
+                        }else{
+                            throw CleanDataException.NoPrizeFound
+                        }
+                        
+                    }
                 }
+                
+            }catch CleanDataException.NoAuthorizedVisits{
+                alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Sucursales no disponibles", message: "No existen visitas a surcursales en el dia de hoy ni manana.")
+            }catch CleanDataException.NoPrizeFound{
+                alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Premios no disponibles", message: "No existen visitas a surcursales en el dia de hoy ni manana.")
             }catch LoginExceptions.InvalidUsernameOrPassword(let message){
                 alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Error Autenticando", message: message ?? "Usuario y Contrasena incorrectos")
-            }catch CleanDataException.NoBranchOfficeFound{
-                alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "No sucursales disponibles", message: "No existen surcursales con premios para entregar en el dia de hoy")
+            }catch CleanDataException.NoAvailableVisits{
+                alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Sucursales no disponibles", message: "No existen visitas a surcursales en el dia de hoy.")
             }catch let error as NSError{
                 alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Error Autenticando", message: error.description)
             }

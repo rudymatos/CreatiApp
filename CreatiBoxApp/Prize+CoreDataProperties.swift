@@ -21,7 +21,7 @@ extension Prize {
     @NSManaged public var type: String
     @NSManaged public var givenBy: LoginUser?
     @NSManaged public var winner: Winner?
-    @NSManaged public var visit: Visit?
+    @NSManaged public var visit: Visit
     @NSManaged public var givenAt: BranchOffice?
 
 }

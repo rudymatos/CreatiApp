@@ -12,10 +12,13 @@ class AppControl{
     
     static let sharedInstance = AppControl()
     
+    var originalVisit: Visit?
+    var usingStockFromDifferrentBranchOffice : Bool = false
     var currentUser : LoginUser?
-    var currentBranchOffice : BranchOffice?
+    var currentVisit : Visit?
     var currentUserPlaying : Winner?
     var currentPrize: Prize?
+    
     
     private init(){
         

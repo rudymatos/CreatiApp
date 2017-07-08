@@ -106,14 +106,14 @@ extension CoreDataHelper{
         self.saveContext()
     }
     
-    func createVisit(date: Date , branchOffice: BranchOffice, visitor: LoginUser, prizes : [Prize]) -> Visit{
+    func createVisit(date: Date , branchOffice: BranchOffice, visitor: LoginUser, prizes : [Prize]){
         let visit = createObjectContext(entityName: Visit.className) as! Visit
         visit.date = date as NSDate
         visit.branchOffice = branchOffice
         visit.visitor = visitor
+        visit.authorized = false
         visit.prizes = NSSet(array: prizes)
         self.saveContext()
-        return visit
     }
     
     

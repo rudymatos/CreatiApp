@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum ReportType{
-    case stockReport
-    case scheduleReport
-    case authorizedExtraStock
+enum ReportType : String{
+    case stockReport = "currentStockSegue"
+    case scheduleReport = "scheduleReportSegue"
+    case winnersReport = "winnersSegue"
 }

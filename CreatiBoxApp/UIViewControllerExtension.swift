@@ -17,15 +17,17 @@ extension UIViewController{
     
     func getCurrentBranchOfficeText() -> String{
         var branchOfficeName = "NO ENCONTRADO"
-        if let branchOffice = getAppControl().currentBranchOffice{
-         branchOfficeName = "\(branchOffice.name) \(branchOffice.address)"
+        if let branchOffice = getAppControl().currentVisit?.branchOffice{
+            branchOfficeName = "\(branchOffice.name) \(branchOffice.address)"
         }
         return branchOfficeName
     }
     
     
     func logout(){
-        getAppControl().currentBranchOffice = nil
+        getAppControl().originalVisit = nil
+        getAppControl().usingStockFromDifferrentBranchOffice = false
+        getAppControl().currentVisit = nil
         getAppControl().currentPrize = nil
         getAppControl().currentUser = nil
         getAppControl().currentUserPlaying = nil

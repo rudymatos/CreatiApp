@@ -13,53 +13,49 @@ class CreatiBoxAppImpl : CreatiBoxType{
     private let coreDataHelper = CoreDataHelper.sharedInstance
     private let dateHelper = DateHelper.sharedInstance
     
+    private func getSortedVisits(bySupervisor supervisor : LoginUser) -> [Visit]{
+        return (supervisor.visits.allObjects as! [Visit]).sorted(by: {($0.date as Date) < ($1.date as Date)})
+    }
     
-    func getBranchOfficeFromLoginUser(supervisor: LoginUser)throws -> BranchOffice{
-        if let currentVisit = supervisor.visits?.filter({ (value) -> Bool in
-            let currentDate = (value as! Visit).date as Date
-            let dateStart = dateHelper.getStartOrEndDate()
-            let dateEnd = dateHelper.getStartOrEndDate(start: false)
-            return currentDate >= dateStart && currentDate < dateEnd
-        }).first as? Visit{
-                return currentVisit.branchOffice
+    func doesVisitHaveAvailablePrizes(visit: Visit) -> Bool{
+        return (visit.prizes.allObjects as! [Prize]).filter({!$0.redeemed}).count > 0
+    }
+    
+    func getAvailablePrizes(fromVisit: Visit) -> [Prize]{
+        return (fromVisit.prizes.allObjects as! [Prize]).filter({!$0.redeemed})
+    }
+    
+    
+    func getVisit(forDate: Date = Date(), bySupervisor supervisor: LoginUser, nextAvailableVisit: Bool = false)throws -> Visit{
+        let sortedVisit = getSortedVisits(bySupervisor: supervisor)
+        if let index = sortedVisit.index(where: { (currentVisit) -> Bool in
+            let startDate = dateHelper.getStartOrEndDate(forDate: forDate)
+            let endDate = dateHelper.getStartOrEndDate(forDate: forDate, start: false)
+            let visitDate = (currentVisit.date as Date)
+            return visitDate >= startDate && visitDate < endDate
+        }){
+            if nextAvailableVisit{
+                if (index + 1) <= (sortedVisit.count - 1){
+                    return sortedVisit[(index + 1)]
+                }else{
+                    throw CleanDataException.NoAvailableVisits
+                }
+            }
+            return sortedVisit[index]
         }else{
-            throw CleanDataException.NoBranchOfficeFound
+            throw CleanDataException.NoAvailableVisits
         }
     }
     
-    func getPrizes(forDate: Date, byBranchOffice : BranchOffice, forReport: Bool = false) -> [Prize]{
-        let startDate = dateHelper.getStartOrEndDate(forDate: Date())
-        let endDate = dateHelper.getStartOrEndDate(forDate: Date(), start: false)
-        let availablePrizesForToday = try! coreDataHelper.getEntityByParam(fetchRequest: Prize.fetchRequest(), query: "branchOffice.name = %@ and branchOffice.address = %@ and date >= %@ and date < %@ \(!forReport ? "and authorized = YES and redeemed = NO" : "")", params: [byBranchOffice.name, byBranchOffice.address,startDate,endDate])
-        return availablePrizesForToday
-    }
     
-    func selectedRandomPrizeFromBranchOffice(branchOffice : BranchOffice)throws -> Prize{
-        do{
-            let availablePrizesForToday = try getPrizes(forDate: Date(), byBranchOffice: branchOffice)
-            let totalAvailablePrizes = availablePrizesForToday.count
-            if availablePrizesForToday.count <= 0 {
-                throw CleanDataException.NoPrizeFound
-            }
-            let randomIndex = arc4random_uniform(UInt32(totalAvailablePrizes))
-            return availablePrizesForToday[Int(randomIndex)]
-            
-        }catch CoreDataExceptions.DataNotFound{
+    func getRandomPrizeFromVisit(visit: Visit)throws -> Prize{
+        if doesVisitHaveAvailablePrizes(visit: visit){
+            let availablePrizes = getAvailablePrizes(fromVisit: visit)
+            let randomIndex = arc4random_uniform(UInt32(availablePrizes.count))
+            return availablePrizes[Int(randomIndex)]
+        }else{
             throw CleanDataException.NoPrizeFound
         }
-    }
-    
-    
-    func getAllBranchOfficesByDate(date: Date, authorized: Bool)throws -> [BranchOffice]{
-        
-        let fromDate = dateHelper.getStartOrEndDate()
-        let toDate = dateHelper.getStartOrEndDate(start: false)
-        let queryString = "SUBQUERY(prizes, $p, any $p.date >= %@ and $p.date < %@ and $p.redeemed == NO \(authorized ? "and $p.authorized == YES" : "")).@count > 0"
-        let branchOfficeList = try coreDataHelper.getEntityByParam(fetchRequest: BranchOffice.fetchRequest(), query: queryString, params: [fromDate, toDate]) as [BranchOffice]
-        if branchOfficeList.count > 0 {
-            return branchOfficeList
-        }
-        throw CleanDataException.NoBranchOfficeFound
     }
     
     

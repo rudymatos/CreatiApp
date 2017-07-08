@@ -26,6 +26,9 @@ class PromontionPersonVC: UIViewController {
     
     func configureView(){
         branchOfficeLBL.text = getCurrentBranchOfficeText()
+        if getAppControl().usingStockFromDifferrentBranchOffice{
+            branchOfficeLBL.textColor = UIColor(red:0.17, green:0.49, blue:0.25, alpha:1.0)
+        }
     }
     
     @IBAction func comeBackFromGameScreen(segue : UIStoryboardSegue){
@@ -49,10 +52,15 @@ class PromontionPersonVC: UIViewController {
     @IBAction func play(_ sender: UIButton) {
         if winnerName.text != "", let name = winnerName.text{
             let winner = creatiBoxImpl.createWinner(name: name, id: winnerId.text, email: winnerEmail.text, phone: winnerPhone.text, nif: winnerNif.text)
-            let prize = try! creatiBoxImpl.selectedRandomPrizeFromBranchOffice(branchOffice: getAppControl().currentBranchOffice!)
+            let prize = try! creatiBoxImpl.getRandomPrizeFromVisit(visit: getAppControl().currentVisit!)
             prize.redeemed = true
             prize.givenBy = getAppControl().currentUser
             prize.winner = winner
+            if getAppControl().usingStockFromDifferrentBranchOffice{
+                prize.givenAt = getAppControl().originalVisit?.branchOffice
+            }else{
+                prize.givenAt = getAppControl().currentVisit?.branchOffice
+            }
             creatiBoxImpl.persistData()
             getAppControl().currentPrize = prize
             performSegue(withIdentifier: "gameVCSegue", sender: nil)

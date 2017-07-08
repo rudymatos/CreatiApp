@@ -61,23 +61,24 @@ class GameVC: UIViewController {
     
     func createCardFromView(view: UIImageView){
         view.layer.cornerRadius = 25
+        view.layer.masksToBounds = true
         view.layer.borderWidth = 1
         view.layer.borderColor  = UIColor.black.withAlphaComponent(0.5).cgColor
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowRadius = 10
+        view.layer.shadowOpacity = 1
+        view.layer.shadowOffset = CGSize.zero
     }
     
     @IBAction func goBack(_ sender: UIButton) {
-        if let branchOffice = getAppControl().currentBranchOffice{
-            if try! creatiBoxImpl.getPrizes(forDate: Date(), byBranchOffice: branchOffice).count > 0{
-                performSegue(withIdentifier: "promotionPersonVCSegue", sender: nil)
-            }else{
-                let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    self.logout()
-                    self.performSegue(withIdentifier: "logoutSegue", sender: nil)
-                })
-                alertViewHelper.createGenericMessage(showOnVC: self, title: "Sin Premios", message: "La sucursal seleccionada no tiene mas premios para este dia. Favor comuniquese con su superisor", buttons: [okAction])
-            }
+        if creatiBoxImpl.doesVisitHaveAvailablePrizes(visit: getAppControl().currentVisit!){
+            performSegue(withIdentifier: "promotionPersonVCSegue", sender: nil)
         }else{
-            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                self.logout()
+                self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+            })
+            alertViewHelper.createGenericMessage(showOnVC: self, title: "Sin Premios", message: "La sucursal seleccionada no tiene mas premios para este dia. Favor comuniquese con su superisor", buttons: [okAction])
         }
     }
     
@@ -87,6 +88,7 @@ class GameVC: UIViewController {
             UIView.transition(with: imageView, duration: 1, options: .transitionFlipFromRight, animations: {
                 if let imageName = self.currentPrize?.type{
                     imageView.image = UIImage(named: imageName)
+                    imageView.contentMode = .center
                 }
             }, completion: {(completed) in
                 

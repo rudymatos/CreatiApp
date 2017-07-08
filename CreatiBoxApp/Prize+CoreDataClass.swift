@@ -17,10 +17,15 @@ public class Prize: NSManagedObject {
     
     enum PrizeType : String{
         case spoon = "prize_spoon"
-        case kitchen_glove = "prize_kitchen"
+        case kitchen_glove = "prize_kitchen_gloves"
         case plastic_container = "prize_plastic_container"
         case lunch_box = "prize_lunch_box"
         case promotional_kit = "prize_promotional_kit"
+    }
+    
+    
+    static func getAllPrizeTypes() -> [PrizeType]{
+        return [.spoon, .kitchen_glove, .plastic_container, .lunch_box, .promotional_kit]
     }
     
     func getImage() -> UIImage{
