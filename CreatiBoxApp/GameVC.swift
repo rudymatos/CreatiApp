@@ -13,7 +13,9 @@ class GameVC: UIViewController {
     @IBOutlet weak var cardView1: UIImageView!
     @IBOutlet weak var cardView2: UIImageView!
     @IBOutlet weak var cardView3: UIImageView!
-    @IBOutlet weak var goBackButton: UIButton!
+    @IBOutlet weak var backgroundRectangle: UIView!
+    @IBOutlet weak var thanksForPlayingLBL: UILabel!
+    @IBOutlet weak var cardsStackView: UIStackView!
     
     private let creatiBoxImpl = CreatiBoxAppImpl()
     private let alertViewHelper = AlertViewHelper.sharedInstance
@@ -26,11 +28,9 @@ class GameVC: UIViewController {
     }
     
     func configureView(){
+        thanksForPlayingLBL.alpha = 0
         currentPrize = getAppControl().currentPrize
-        createCardFromView(view: cardView1)
-        createCardFromView(view: cardView2)
-        createCardFromView(view: cardView3)
-        goBackButton.alpha = 0
+        createCardFromView(view: backgroundRectangle)
         cardView1.alpha = 0
         cardView2.alpha = 0
         cardView3.alpha = 0
@@ -47,30 +47,28 @@ class GameVC: UIViewController {
             self.cardView1.transform = .identity
         }, completion:nil)
         
-        UIView.animate(withDuration: 0.9, delay: 1.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [.curveEaseIn], animations: {
+        UIView.animate(withDuration: 0.9, delay: 0.5, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [.curveEaseIn], animations: {
             self.cardView2.alpha = 1
             self.cardView2.transform = .identity
         }, completion:nil)
         
-        UIView.animate(withDuration: 0.9, delay: 2.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [.curveEaseIn], animations: {
-            self.cardView3.alpha = 3
+        UIView.animate(withDuration: 0.9, delay: 0.8, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [.curveEaseIn], animations: {
+            self.cardView3.alpha = 1
             self.cardView3.transform = .identity
         }, completion:nil)
         
     }
     
-    func createCardFromView(view: UIImageView){
-        view.layer.cornerRadius = 25
+    func createCardFromView(view: UIView){
         view.layer.masksToBounds = true
-        view.layer.borderWidth = 1
-        view.layer.borderColor  = UIColor.black.withAlphaComponent(0.5).cgColor
         view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowRadius = 10
-        view.layer.shadowOpacity = 1
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.6
         view.layer.shadowOffset = CGSize.zero
+        view.layer.masksToBounds = false
     }
     
-    @IBAction func goBack(_ sender: UIButton) {
+    @IBAction func goBack(_ sender: UITapGestureRecognizer) {
         if creatiBoxImpl.doesVisitHaveAvailablePrizes(visit: getAppControl().currentVisit!){
             performSegue(withIdentifier: "promotionPersonVCSegue", sender: nil)
         }else{
@@ -80,6 +78,7 @@ class GameVC: UIViewController {
             })
             alertViewHelper.createGenericMessage(showOnVC: self, title: "Sin Premios", message: "La sucursal seleccionada no tiene mas premios para este dia. Favor comuniquese con su superisor", buttons: [okAction])
         }
+        
     }
     
     @IBAction func revealPrize(_ sender: UITapGestureRecognizer) {
@@ -87,22 +86,25 @@ class GameVC: UIViewController {
             let imageView = currentView as! UIImageView
             UIView.transition(with: imageView, duration: 1, options: .transitionFlipFromRight, animations: {
                 if let imageName = self.currentPrize?.type{
-                    imageView.image = UIImage(named: imageName)
-                    imageView.contentMode = .center
+                    imageView.image = UIImage(named: "winner_\(imageName)")
                 }
             }, completion: {(completed) in
-                
-                self.cardView1.backgroundColor = self.cardView1.backgroundColor?.withAlphaComponent(0.8)
-                self.cardView2.backgroundColor = self.cardView2.backgroundColor?.withAlphaComponent(0.8)
-                self.cardView3.backgroundColor = self.cardView3.backgroundColor?.withAlphaComponent(0.8)
                 
                 self.cardView1.isUserInteractionEnabled = false
                 self.cardView2.isUserInteractionEnabled = false
                 self.cardView3.isUserInteractionEnabled = false
                 
-                UIView.animate(withDuration: 1, animations: {
-                    self.goBackButton.alpha = 1
+                UIView.animate(withDuration: 5, animations: { 
+                    self.cardsStackView.alpha = 0
+                }, completion: { (complete) in
+                    self.thanksForPlayingLBL.transform = CGAffineTransform(translationX: 0, y: 200)
+                    UIView.animate(withDuration: 1, animations: {
+                        self.thanksForPlayingLBL.transform = CGAffineTransform.identity
+                        self.thanksForPlayingLBL.alpha = 1
+                    })
                 })
+                
+                
             })
         }
     }

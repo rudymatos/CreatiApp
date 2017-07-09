@@ -15,6 +15,11 @@ extension UIViewController{
         return AppControl.sharedInstance
     }
     
+    func dismissKeyboard(){
+        print("in here dismissing")
+        view.endEditing(true)
+    }
+    
     func getCurrentBranchOfficeText() -> String{
         var branchOfficeName = "NO ENCONTRADO"
         if let branchOffice = getAppControl().currentVisit?.branchOffice{

@@ -42,7 +42,9 @@
 		F5CDDE411F07E5AC00F1E056 /* CreatiBoxAppImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE401F07E5AC00F1E056 /* CreatiBoxAppImpl.swift */; };
 		F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */; };
 		F5CDDE601F083B3700F1E056 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */; };
+		F5EFD69D1F11C592000D064D /* 80770500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5EFD69C1F11C592000D064D /* 80770500.ttf */; };
 		F5F394501F1133500035477F /* Face Off M54.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5F3944F1F1133500035477F /* Face Off M54.ttf */; };
+		F5F3BBCE1F118AE6002238A6 /* Mission-Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +98,9 @@
 		F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewHelper.swift; sourceTree = "<group>"; };
 		F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CreatiBoxApp v1.0.xcdatamodel"; sourceTree = "<group>"; };
 		F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		F5EFD69C1F11C592000D064D /* 80770500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 80770500.ttf; sourceTree = "<group>"; };
 		F5F3944F1F1133500035477F /* Face Off M54.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Face Off M54.ttf"; sourceTree = "<group>"; };
+		F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission-Script.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */,
+				F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */,
+				F5EFD69C1F11C592000D064D /* 80770500.ttf */,
 				F5F3944F1F1133500035477F /* Face Off M54.ttf */,
 				F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */,
 				F53A38181F04524B00F853D0 /* AppDelegate.swift */,
@@ -361,7 +367,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53A38261F04524B00F853D0 /* LaunchScreen.storyboard in Resources */,
+				F5F3BBCE1F118AE6002238A6 /* Mission-Script.otf in Resources */,
 				F50F25DB1F0B3B780093ACB2 /* pulp fiction m54.ttf in Resources */,
+				F5EFD69D1F11C592000D064D /* 80770500.ttf in Resources */,
 				F5F394501F1133500035477F /* Face Off M54.ttf in Resources */,
 				F50F25D61F0B30EB0093ACB2 /* Saloon Girl Fill.ttf in Resources */,
 				F53A38231F04524B00F853D0 /* Assets.xcassets in Resources */,

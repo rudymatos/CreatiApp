@@ -14,9 +14,11 @@ class PromontionPersonVC: UIViewController {
     @IBOutlet weak var winnerId: UITextField!
     @IBOutlet weak var winnerPhone: UITextField!
     @IBOutlet weak var winnerEmail: UITextField!
-    @IBOutlet weak var winnerNif: UITextField!
+    
     private let creatiBoxImpl = CreatiBoxAppImpl()
     private let alertViewHelper = AlertViewHelper.sharedInstance
+    private var isKeyboardBeingShown = false
+    
     @IBOutlet weak var branchOfficeLBL: UILabel!
     
     override func viewDidLoad() {
@@ -24,7 +26,30 @@ class PromontionPersonVC: UIViewController {
         configureView()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func keyboardWillHide(sender:Notification){
+        print("hiding keyboard")
+        isKeyboardBeingShown = false
+        self.view.frame.origin.y += 270
+    }
+    
+    func keyboardWillShow(sender: Notification){
+        if !isKeyboardBeingShown{
+            isKeyboardBeingShown = true
+            UIView.animate(withDuration: 0.1, animations: {
+                self.view.frame.origin.y -= 270
+            })
+        }
+    }
+    
     func configureView(){
+        let dismissTap = UITapGestureRecognizer.init(target: self, action: #selector(PromontionPersonVC.dismissKeyboard))
+        self.view.addGestureRecognizer(dismissTap)
+        NotificationCenter.default.addObserver(self, selector: #selector(PromontionPersonVC.keyboardWillShow(sender:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(PromontionPersonVC.keyboardWillHide(sender:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         branchOfficeLBL.text = getCurrentBranchOfficeText()
         if getAppControl().usingStockFromDifferrentBranchOffice{
             branchOfficeLBL.textColor = UIColor(red:0.17, green:0.49, blue:0.25, alpha:1.0)
@@ -36,7 +61,6 @@ class PromontionPersonVC: UIViewController {
         winnerId.text = ""
         winnerPhone.text = ""
         winnerEmail.text = ""
-        winnerNif.text = ""
         getAppControl().currentPrize = nil
     }
     
@@ -51,7 +75,7 @@ class PromontionPersonVC: UIViewController {
     
     @IBAction func play(_ sender: UIButton) {
         if winnerName.text != "", let name = winnerName.text{
-            let winner = creatiBoxImpl.createWinner(name: name, id: winnerId.text, email: winnerEmail.text, phone: winnerPhone.text, nif: winnerNif.text)
+            let winner = creatiBoxImpl.createWinner(name: name, id: winnerId.text, email: winnerEmail.text, phone: winnerPhone.text, nif: nil)
             let prize = try! creatiBoxImpl.getRandomPrizeFromVisit(visit: getAppControl().currentVisit!)
             prize.redeemed = true
             prize.givenBy = getAppControl().currentUser

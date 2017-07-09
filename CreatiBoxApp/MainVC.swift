@@ -17,16 +17,47 @@ class MainVC: UIViewController {
     private let alertViewHelper = AlertViewHelper.sharedInstance
     private let initDateHelper = InitialDataCreatorHelper.sharedInstance
     private let dateHelper = DateHelper.sharedInstance
+    private var isKeyboardBeingShown = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        initDateHelper.createUserLoginData()
-//        initDateHelper.createBranchOffices()
-//        try! initDateHelper.createPrizes()
+        configureView()
+//                initDateHelper.createUserLoginData()
+//                initDateHelper.createBranchOffices()
+//                try! initDateHelper.createPrizes()
     }
     
+    func configureView(){
+        let dismissKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(MainVC.dismissKeyboard))
+        view.addGestureRecognizer(dismissKeyboardTap)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainVC.keyboardWillShow(sender:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainVC.keyboardWillHide(sender:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func keyboardWillHide(sender: Notification){
+        isKeyboardBeingShown = false
+        self.view.frame.origin.y += 100
+        
+    }
+    
+    func keyboardWillShow(sender: Notification){
+        if !isKeyboardBeingShown{
+            isKeyboardBeingShown = true
+            UIView.animate(withDuration: 0.1, animations: {
+                self.view.frame.origin.y -= 100
+            })
+        }
+    }
     
     @IBAction func logout(segue: UIStoryboardSegue){
+        username.text = ""
+        password.text = ""
     }
     
     @IBAction func login(_ sender: UIButton) {
