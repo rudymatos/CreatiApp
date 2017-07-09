@@ -84,15 +84,16 @@ class GameVC: UIViewController {
     @IBAction func revealPrize(_ sender: UITapGestureRecognizer) {
         if let currentView = sender.view{
             let imageView = currentView as! UIImageView
+            self.cardView1.isUserInteractionEnabled = false
+            self.cardView2.isUserInteractionEnabled = false
+            self.cardView3.isUserInteractionEnabled = false
+            
             UIView.transition(with: imageView, duration: 1, options: .transitionFlipFromRight, animations: {
                 if let imageName = self.currentPrize?.type{
                     imageView.image = UIImage(named: "winner_\(imageName)")
                 }
             }, completion: {(completed) in
                 
-                self.cardView1.isUserInteractionEnabled = false
-                self.cardView2.isUserInteractionEnabled = false
-                self.cardView3.isUserInteractionEnabled = false
                 
                 UIView.animate(withDuration: 5, animations: { 
                     self.cardsStackView.alpha = 0

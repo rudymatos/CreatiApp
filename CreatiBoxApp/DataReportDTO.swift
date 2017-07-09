@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct DataReportDTO{
+class DataReportDTO : GenericDataReport{
     
-    let branchOfficeName : String
-    let branchOfficeAddress : String
-    let branchOfficeImage : String
     let prizeCounter : [(name: String, quantity: Int)]
-    let spanishDate: String
+    
+    init(branchOfficeName : String, branchOfficeAddress: String, branchOfficeImage: String, spanishDate: String, prizeCounter: [(name: String, quantity: Int)]){
+        self.prizeCounter = prizeCounter
+        super.init(branchOfficeName: branchOfficeName, branchOfficeAddress: branchOfficeAddress, branchOfficeImage: branchOfficeImage, spanishDate: spanishDate)
+    }
     
 }

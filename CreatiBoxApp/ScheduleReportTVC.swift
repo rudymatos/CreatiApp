@@ -33,17 +33,7 @@ class ScheduleReportTVC: UITableViewCell {
     
     
     func configureView(){
-        
-        cardView.layer.cornerRadius = 5
-        cardView.layer.masksToBounds = true
-        cardView.layer.borderColor = UIColor.black.cgColor
-        cardView.layer.borderWidth = 0.5
-        cardView.layer.shadowColor = UIColor.black.cgColor
-        cardView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        cardView.layer.shadowRadius = 3
-        cardView.layer.shadowOpacity = 0.6
-        cardView.layer.masksToBounds = false
-        
+        format(cardView: cardView)
         if let dataReport = dataReport{
             branchOfficeNameAddressLBL.text = "\(dataReport.branchOfficeName) \(dataReport.branchOfficeAddress)"
             spanishDateLBL.text = dataReport.spanishDate

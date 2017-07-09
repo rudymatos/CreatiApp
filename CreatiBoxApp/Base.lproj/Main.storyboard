@@ -55,7 +55,7 @@
                                         <color key="textColor" red="0.60607016086578369" green="0.19758757948875427" blue="0.10257720202207565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="promotor1" placeholder="Nombre de Usuario" textAlignment="center" minimumFontSize="17" background="text_edit_background" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Jo-okU">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="supervisor1" placeholder="Nombre de Usuario" textAlignment="center" minimumFontSize="17" background="text_edit_background" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Jo-okU">
                                         <rect key="frame" x="0.0" y="57" width="400" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="DuG-dg-JBP"/>
@@ -477,7 +477,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Tg9-11-W4k">
-                                <rect key="frame" x="412" y="248" width="200" height="400"/>
+                                <rect key="frame" x="412" y="134" width="200" height="500"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zui-WS-mM6">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
@@ -487,8 +487,19 @@
                                         </constraints>
                                         <state key="normal" image="send_report_button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-dv-mn3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4n-mZ-c2d">
                                         <rect key="frame" x="0.0" y="100" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="nFp-td-Djc"/>
+                                            <constraint firstAttribute="width" constant="200" id="xH6-sT-lhI"/>
+                                        </constraints>
+                                        <state key="normal" image="winner_list"/>
+                                        <connections>
+                                            <segue destination="IKq-zZ-rPQ" kind="show" identifier="winnersSegue" id="vZj-wH-rtA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-dv-mn3">
+                                        <rect key="frame" x="0.0" y="200" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Q6c-dV-ciR"/>
                                             <constraint firstAttribute="height" constant="100" id="zek-bl-Zyj"/>
@@ -499,7 +510,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnn-jm-3Cd">
-                                        <rect key="frame" x="0.0" y="200" width="200" height="100"/>
+                                        <rect key="frame" x="0.0" y="300" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="AKI-LZ-TrO"/>
                                             <constraint firstAttribute="width" constant="200" id="AMe-Pc-tEr"/>
@@ -510,7 +521,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeS-VR-lKT">
-                                        <rect key="frame" x="0.0" y="300" width="200" height="100"/>
+                                        <rect key="frame" x="0.0" y="400" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="M17-dG-APF"/>
                                             <constraint firstAttribute="width" constant="200" id="Y68-ER-7br"/>
@@ -543,15 +554,15 @@
                         <constraints>
                             <constraint firstItem="MtL-eW-kjs" firstAttribute="centerX" secondItem="vv3-dg-HQn" secondAttribute="centerX" id="3C1-DG-2Mh"/>
                             <constraint firstAttribute="trailing" secondItem="xHn-wo-C4A" secondAttribute="trailing" id="7DP-dK-Lnh"/>
+                            <constraint firstItem="Tg9-11-W4k" firstAttribute="centerY" secondItem="2Un-QH-KEb" secondAttribute="centerY" id="APb-BD-xkF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vv3-dg-HQn" secondAttribute="trailing" constant="40" id="CIl-ag-2a3"/>
                             <constraint firstItem="vv3-dg-HQn" firstAttribute="top" secondItem="QmH-uq-kMy" secondAttribute="bottom" constant="100" id="Ita-1d-QsA"/>
-                            <constraint firstItem="Tg9-11-W4k" firstAttribute="top" secondItem="QmH-uq-kMy" secondAttribute="bottom" constant="228" id="Pl2-aq-6yB"/>
                             <constraint firstAttribute="bottom" secondItem="xHn-wo-C4A" secondAttribute="bottom" id="SKA-VH-pgs"/>
                             <constraint firstItem="xHn-wo-C4A" firstAttribute="top" secondItem="MtL-eW-kjs" secondAttribute="bottom" constant="-182.5" id="Ume-6G-0en"/>
                             <constraint firstItem="xHn-wo-C4A" firstAttribute="leading" secondItem="2Un-QH-KEb" secondAttribute="leading" id="VUZ-7v-MD8"/>
                             <constraint firstItem="MtL-eW-kjs" firstAttribute="top" secondItem="vv3-dg-HQn" secondAttribute="bottom" constant="8" id="Ziy-Qd-kRD"/>
-                            <constraint firstItem="Tg9-11-W4k" firstAttribute="centerX" secondItem="2Un-QH-KEb" secondAttribute="centerX" id="arU-HT-hgZ"/>
                             <constraint firstItem="xHn-wo-C4A" firstAttribute="top" secondItem="2Un-QH-KEb" secondAttribute="top" id="ayZ-un-L5B"/>
+                            <constraint firstItem="Tg9-11-W4k" firstAttribute="centerX" secondItem="2Un-QH-KEb" secondAttribute="centerX" id="jcd-Al-YFk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -582,7 +593,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fYH-b0-sKd">
-                                <rect key="frame" x="287" y="248" width="450" height="482"/>
+                                <rect key="frame" x="287" y="93" width="450" height="582"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vista (Reportes)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnG-KT-FJS">
                                         <rect key="frame" x="48" y="0.0" width="354" height="62"/>
@@ -591,10 +602,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-cy-K8E">
-                                        <rect key="frame" x="0.0" y="82" width="450" height="400"/>
+                                        <rect key="frame" x="0.0" y="82" width="450" height="500"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="mfj-6o-u5b"/>
+                                            <constraint firstAttribute="height" constant="500" id="mfj-6o-u5b"/>
                                             <constraint firstAttribute="width" constant="450" id="xZR-Lz-Bya"/>
                                         </constraints>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -616,8 +627,8 @@
                                                                         <constraint firstAttribute="height" constant="70" id="eZW-n4-fnU"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tcb_green" translatesAutoresizingMaskIntoConstraints="NO" id="zMU-f0-hid">
-                                                                    <rect key="frame" x="92" y="8" width="235" height="33"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tcb_dark_green" translatesAutoresizingMaskIntoConstraints="NO" id="zMU-f0-hid">
+                                                                    <rect key="frame" x="91.5" y="8" width="236" height="33"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="33" id="sKx-RD-2eR"/>
                                                                     </constraints>
@@ -627,14 +638,14 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="239" id="NFM-lp-dW0"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="14"/>
+                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="14"/>
                                                                     <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Sirena Wiston Churchill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-sn-CCn">
-                                                                    <rect key="frame" x="127.5" y="127" width="164.5" height="14.5"/>
-                                                                    <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="12"/>
-                                                                    <color key="textColor" red="0.51777744293212891" green="0.77522653341293335" blue="0.27646607160568237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <rect key="frame" x="142.5" y="127" width="133" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-8N-lkc">
@@ -653,7 +664,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxV-It-jqS">
                                                                                     <rect key="frame" x="30" y="0.0" width="9.5" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="16"/>
-                                                                                    <color key="textColor" red="0.51764705882352935" green="0.77647058823529413" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -671,7 +682,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-M3-ktp">
                                                                                     <rect key="frame" x="30" y="0.0" width="9.5" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="16"/>
-                                                                                    <color key="textColor" red="0.51764705882352935" green="0.77647058823529413" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -689,7 +700,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmQ-xf-OoC">
                                                                                     <rect key="frame" x="30" y="0.0" width="9.5" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="16"/>
-                                                                                    <color key="textColor" red="0.51764705882352935" green="0.77647058823529413" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -707,7 +718,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWY-JA-Xos">
                                                                                     <rect key="frame" x="30" y="0.0" width="9.5" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="16"/>
-                                                                                    <color key="textColor" red="0.51764705882352935" green="0.77647058823529413" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -725,7 +736,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yh-VJ-fVv">
                                                                                     <rect key="frame" x="30" y="0.0" width="9.5" height="25"/>
                                                                                     <fontDescription key="fontDescription" name="PulpFictionM54" family="Pulp Fiction M54" pointSize="16"/>
-                                                                                    <color key="textColor" red="0.51764705882352935" green="0.77647058823529413" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -769,6 +780,173 @@
                                                     <outlet property="spoonCounterLBL" destination="wWY-JA-Xos" id="5Sl-fp-XUU"/>
                                                 </connections>
                                             </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="winnerReportCell" rowHeight="300" id="5wU-PT-vuZ" customClass="WinnersReportTVC" customModule="CreatiBoxApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="228" width="450" height="300"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5wU-PT-vuZ" id="nLI-Eh-2e8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-vd-xbp">
+                                                            <rect key="frame" x="16" y="8" width="418" height="284"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tcb_dark_green" translatesAutoresizingMaskIntoConstraints="NO" id="EfB-8a-Kj3">
+                                                                    <rect key="frame" x="91.5" y="8" width="236" height="33"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="33" id="0xx-qD-KfW"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miercoles 12 de Julio del 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTm-38-jJl">
+                                                                    <rect key="frame" x="90" y="16" width="239" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="239" id="Txo-p8-jnM"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="14"/>
+                                                                    <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KTm-Kp-Soy">
+                                                                    <rect key="frame" x="134" y="49" width="150" height="70"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_lasirena" translatesAutoresizingMaskIntoConstraints="NO" id="21X-2p-nDA">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="70" id="JNB-NG-4kU"/>
+                                                                                <constraint firstAttribute="width" constant="70" id="b9L-ya-GYW"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prize_kitchen_gloves" translatesAutoresizingMaskIntoConstraints="NO" id="y2Z-KL-AuS">
+                                                                            <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="70" id="RTU-Nl-f7H"/>
+                                                                                <constraint firstAttribute="width" constant="70" id="WuR-tc-KuQ"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="boW-dQ-iRs">
+                                                                    <rect key="frame" x="95" y="116" width="228.5" height="137"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7jU-cw-fmI">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="137"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTREGADO EN:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhG-0R-3Ju">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.60607016089999999" green="0.1975875795" blue="0.10257720200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTREGADO POR:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaA-or-BKT">
+                                                                                    <rect key="frame" x="0.0" y="24.5" width="100" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.60607016089999999" green="0.1975875795" blue="0.10257720200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOMBRE CLIENTE:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9A-BE-Ef6">
+                                                                                    <rect key="frame" x="0.0" y="49" width="100" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.60607016089999999" green="0.1975875795" blue="0.10257720200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEDULA CLIENTE:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-tX-5Lt">
+                                                                                    <rect key="frame" x="0.0" y="73.5" width="100" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.60607016089999999" green="0.1975875795" blue="0.10257720200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL CLIENTE:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF7-HJ-amT">
+                                                                                    <rect key="frame" x="0.0" y="98" width="100" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.60607016089999999" green="0.1975875795" blue="0.10257720200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TELEFONO CLIENTE:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89A-3v-Kmf">
+                                                                                    <rect key="frame" x="0.0" y="122.5" width="100" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.60607016089999999" green="0.1975875795" blue="0.10257720200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWb-F1-HOn">
+                                                                            <rect key="frame" x="110" y="0.0" width="118.5" height="137"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sirena Wiston Churchill" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGM-OK-bb4">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="118.5" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.0010620885299999999" green="0.51474905010000005" blue="0.51867240670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sirena Wiston Churchill" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBf-16-2GI">
+                                                                                    <rect key="frame" x="0.0" y="24.5" width="118.5" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.0010620885295793414" green="0.51474905014038086" blue="0.5186724066734314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sirena Wiston Churchill" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpG-rw-5fY">
+                                                                                    <rect key="frame" x="0.0" y="49" width="118.5" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.0010620885299999999" green="0.51474905010000005" blue="0.51867240670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sirena Wiston Churchill" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRF-tL-oCP">
+                                                                                    <rect key="frame" x="0.0" y="73.5" width="118.5" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.0010620885299999999" green="0.51474905010000005" blue="0.51867240670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sirena Wiston Churchill" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XQ-dR-mDF">
+                                                                                    <rect key="frame" x="0.0" y="98" width="118.5" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.0010620885299999999" green="0.51474905010000005" blue="0.51867240670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sirena Wiston Churchill" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0K-za-PgV">
+                                                                                    <rect key="frame" x="0.0" y="122.5" width="118.5" height="14.5"/>
+                                                                                    <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.0010620885299999999" green="0.51474905010000005" blue="0.51867240670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="boW-dQ-iRs" firstAttribute="centerX" secondItem="Xda-vd-xbp" secondAttribute="centerX" id="8oC-aG-jBb"/>
+                                                                <constraint firstItem="EfB-8a-Kj3" firstAttribute="top" secondItem="Xda-vd-xbp" secondAttribute="top" constant="8" id="9KZ-oY-c5m"/>
+                                                                <constraint firstItem="KTm-Kp-Soy" firstAttribute="top" secondItem="EfB-8a-Kj3" secondAttribute="bottom" constant="8" id="Br6-RU-vUX"/>
+                                                                <constraint firstItem="boW-dQ-iRs" firstAttribute="top" secondItem="KTm-Kp-Soy" secondAttribute="bottom" constant="-3" id="Fzj-ys-oUh"/>
+                                                                <constraint firstItem="KTm-Kp-Soy" firstAttribute="centerX" secondItem="Xda-vd-xbp" secondAttribute="centerX" id="LtT-2c-Juy"/>
+                                                                <constraint firstItem="xTm-38-jJl" firstAttribute="centerX" secondItem="EfB-8a-Kj3" secondAttribute="centerX" id="QMC-uJ-2Td"/>
+                                                                <constraint firstItem="EfB-8a-Kj3" firstAttribute="centerX" secondItem="Xda-vd-xbp" secondAttribute="centerX" id="iLF-vy-NgU"/>
+                                                                <constraint firstItem="xTm-38-jJl" firstAttribute="centerY" secondItem="EfB-8a-Kj3" secondAttribute="centerY" id="oVE-Vr-La8"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Xda-vd-xbp" firstAttribute="top" secondItem="nLI-Eh-2e8" secondAttribute="top" constant="8" id="OwU-1o-Aev"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Xda-vd-xbp" secondAttribute="bottom" constant="8" id="S9t-ok-7xI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Xda-vd-xbp" secondAttribute="trailing" constant="16" id="Yxe-4r-C0M"/>
+                                                        <constraint firstItem="Xda-vd-xbp" firstAttribute="leading" secondItem="nLI-Eh-2e8" secondAttribute="leading" constant="16" id="qfi-HS-uuN"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.98431372549999996" green="0.92156862750000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="branchOfficeIV" destination="21X-2p-nDA" id="mcA-FK-ZH8"/>
+                                                    <outlet property="cardView" destination="Xda-vd-xbp" id="PsE-jE-HnC"/>
+                                                    <outlet property="customerEmailLBL" destination="0XQ-dR-mDF" id="adR-QX-zpb"/>
+                                                    <outlet property="customerIdLBL" destination="RRF-tL-oCP" id="GHB-2l-pvZ"/>
+                                                    <outlet property="customerNameLBL" destination="rpG-rw-5fY" id="pMH-Vg-Hsg"/>
+                                                    <outlet property="customerPhoneLBL" destination="a0K-za-PgV" id="eTm-uH-zEp"/>
+                                                    <outlet property="givenAtLBL" destination="SGM-OK-bb4" id="iDK-vO-xnC"/>
+                                                    <outlet property="givenByLBL" destination="cBf-16-2GI" id="46D-nP-BJN"/>
+                                                    <outlet property="prizeIV" destination="y2Z-KL-AuS" id="Kor-gb-bQI"/>
+                                                    <outlet property="spanishDateLBL" destination="xTm-38-jJl" id="HG0-l8-dge"/>
+                                                </connections>
+                                            </tableViewCell>
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="IKq-zZ-rPQ" id="RcG-su-wtQ"/>
@@ -794,7 +972,7 @@
                             <constraint firstItem="mCl-i4-Daa" firstAttribute="top" secondItem="FaJ-yY-Ghb" secondAttribute="bottom" constant="100" id="KXA-rx-l1Q"/>
                             <constraint firstItem="fYH-b0-sKd" firstAttribute="centerX" secondItem="Kme-Jp-gUW" secondAttribute="centerX" id="MM8-G5-jsE"/>
                             <constraint firstItem="kJI-a7-MU0" firstAttribute="leading" secondItem="Kme-Jp-gUW" secondAttribute="leading" id="Nnv-TX-MNm"/>
-                            <constraint firstItem="fYH-b0-sKd" firstAttribute="top" secondItem="FaJ-yY-Ghb" secondAttribute="bottom" constant="228" id="uFX-3d-mB5"/>
+                            <constraint firstItem="fYH-b0-sKd" firstAttribute="centerY" secondItem="Kme-Jp-gUW" secondAttribute="centerY" id="era-Tx-jTO"/>
                             <constraint firstItem="mCl-i4-Daa" firstAttribute="leading" secondItem="Kme-Jp-gUW" secondAttribute="leadingMargin" constant="40" id="v8Q-1u-rop"/>
                             <constraint firstItem="kJI-a7-MU0" firstAttribute="bottom" secondItem="mlL-7N-T0D" secondAttribute="top" id="vzt-De-U9f"/>
                         </constraints>
@@ -829,10 +1007,11 @@
         <image name="prize_spoon" width="69" height="125"/>
         <image name="schedule_button" width="236" height="78"/>
         <image name="send_report_button" width="236" height="78"/>
-        <image name="tcb_green" width="235" height="76"/>
+        <image name="tcb_dark_green" width="236" height="78"/>
         <image name="text_edit_background" width="370" height="35"/>
+        <image name="winner_list" width="236" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fYM-Fd-e62"/>
+        <segue reference="vZj-wH-rtA"/>
     </inferredMetricsTieBreakers>
 </document>

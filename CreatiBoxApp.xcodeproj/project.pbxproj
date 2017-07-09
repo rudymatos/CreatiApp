@@ -43,6 +43,10 @@
 		F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE421F07FB1600F1E056 /* AlertViewHelper.swift */; };
 		F5CDDE601F083B3700F1E056 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */; };
 		F5EFD69D1F11C592000D064D /* 80770500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5EFD69C1F11C592000D064D /* 80770500.ttf */; };
+		F5EFD69F1F11CDBC000D064D /* WinnerReportDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFD69E1F11CDBC000D064D /* WinnerReportDTO.swift */; };
+		F5EFD6A31F11CE6A000D064D /* GenericDataReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFD6A21F11CE6A000D064D /* GenericDataReport.swift */; };
+		F5EFD6A51F11DC7B000D064D /* WinnersReportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFD6A41F11DC7B000D064D /* WinnersReportTVC.swift */; };
+		F5EFD6A71F11DF78000D064D /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFD6A61F11DF78000D064D /* UITableViewExtension.swift */; };
 		F5F394501F1133500035477F /* Face Off M54.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5F3944F1F1133500035477F /* Face Off M54.ttf */; };
 		F5F3BBCE1F118AE6002238A6 /* Mission-Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */; };
 /* End PBXBuildFile section */
@@ -99,6 +103,10 @@
 		F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CreatiBoxApp v1.0.xcdatamodel"; sourceTree = "<group>"; };
 		F5CDDE5F1F083B3700F1E056 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F5EFD69C1F11C592000D064D /* 80770500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 80770500.ttf; sourceTree = "<group>"; };
+		F5EFD69E1F11CDBC000D064D /* WinnerReportDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerReportDTO.swift; sourceTree = "<group>"; };
+		F5EFD6A21F11CE6A000D064D /* GenericDataReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataReport.swift; sourceTree = "<group>"; };
+		F5EFD6A41F11DC7B000D064D /* WinnersReportTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnersReportTVC.swift; sourceTree = "<group>"; };
+		F5EFD6A61F11DF78000D064D /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		F5F3944F1F1133500035477F /* Face Off M54.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Face Off M54.ttf"; sourceTree = "<group>"; };
 		F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission-Script.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F5A9F2551F107B0700802D2F /* ScheduleReportTVC.swift */,
+				F5EFD6A41F11DC7B000D064D /* WinnersReportTVC.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F51D021D1F086739003DE5E0 /* UIViewControllerExtension.swift */,
+				F5EFD6A61F11DF78000D064D /* UITableViewExtension.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				F5A9F2531F106C3400802D2F /* DataReportDTO.swift */,
+				F5EFD69E1F11CDBC000D064D /* WinnerReportDTO.swift */,
+				F5EFD6A21F11CE6A000D064D /* GenericDataReport.swift */,
 			);
 			name = dtoS;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EFD6A51F11DC7B000D064D /* WinnersReportTVC.swift in Sources */,
 				F5A9F2501F0EF73A00802D2F /* Visit+CoreDataClass.swift in Sources */,
 				F5A9F24F1F0EF73A00802D2F /* LoginUser+CoreDataProperties.swift in Sources */,
 				F5CDDE431F07FB1600F1E056 /* AlertViewHelper.swift in Sources */,
@@ -407,6 +420,8 @@
 				F5CDDE3F1F07E52300F1E056 /* CreatiBoxType.swift in Sources */,
 				F5A9F2511F0EF73A00802D2F /* Visit+CoreDataProperties.swift in Sources */,
 				F5A9F2491F0EF73A00802D2F /* Winner+CoreDataProperties.swift in Sources */,
+				F5EFD6A31F11CE6A000D064D /* GenericDataReport.swift in Sources */,
+				F5EFD69F1F11CDBC000D064D /* WinnerReportDTO.swift in Sources */,
 				F5CDDE411F07E5AC00F1E056 /* CreatiBoxAppImpl.swift in Sources */,
 				F5A9F2481F0EF73A00802D2F /* Winner+CoreDataClass.swift in Sources */,
 				F50F25FC1F0B52040093ACB2 /* ReportVC.swift in Sources */,
@@ -415,6 +430,7 @@
 				F51D021B1F0866D3003DE5E0 /* AppControl.swift in Sources */,
 				F51D02201F086C42003DE5E0 /* PromontionPersonVC.swift in Sources */,
 				F50F25FF1F0BAC120093ACB2 /* ReportType.swift in Sources */,
+				F5EFD6A71F11DF78000D064D /* UITableViewExtension.swift in Sources */,
 				F5A9F24C1F0EF73A00802D2F /* BranchOffice+CoreDataClass.swift in Sources */,
 				F5A9F2541F106C3400802D2F /* DataReportDTO.swift in Sources */,
 				F5A9F24D1F0EF73A00802D2F /* BranchOffice+CoreDataProperties.swift in Sources */,
