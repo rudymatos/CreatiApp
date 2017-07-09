@@ -23,10 +23,10 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        initDateHelper.createUserLoginData()
+//        initDateHelper.createBranchOffices()
+//        try! initDateHelper.createPrizes()
         configureView()
-//                initDateHelper.createUserLoginData()
-//                initDateHelper.createBranchOffices()
-//                try! initDateHelper.createPrizes()
     }
     
     func configureView(){
