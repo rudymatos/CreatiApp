@@ -74,8 +74,8 @@ class PromontionPersonVC: UIViewController {
     }
     
     @IBAction func play(_ sender: UIButton) {
-        if winnerName.text != "", let name = winnerName.text{
-            let winner = creatiBoxImpl.createWinner(name: name, id: winnerId.text, email: winnerEmail.text, phone: winnerPhone.text, nif: nil)
+        if winnerName.text?.trimmingCharacters(in: CharacterSet.whitespaces) != "" && winnerId.text?.trimmingCharacters(in: CharacterSet.whitespaces) != "", let name = winnerName.text, let id = winnerId.text{
+            let winner = creatiBoxImpl.createWinner(name: name, id: id, email: winnerEmail.text, phone: winnerPhone.text, nif: nil)
             let prize = try! creatiBoxImpl.getRandomPrizeFromVisit(visit: getAppControl().currentVisit!)
             prize.redeemed = true
             prize.givenBy = getAppControl().currentUser
@@ -89,7 +89,7 @@ class PromontionPersonVC: UIViewController {
             getAppControl().currentPrize = prize
             performSegue(withIdentifier: "gameVCSegue", sender: nil)
         }else{
-            alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Campos Invalidos", message: "Jugador debe introducir al menos el nombre para poder jugar")
+            alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Campos Invalidos", message: "Jugador debe introducir al menos el nombre y la cedula para poder jugar")
         }
     }
     

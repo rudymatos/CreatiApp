@@ -35,11 +35,12 @@ class CreatiBoxAppImpl : CreatiBoxType{
             return visitDate >= startDate && visitDate < endDate
         }){
             if nextAvailableVisit{
-                if (index + 1) <= (sortedVisit.count - 1){
-                    return sortedVisit[(index + 1)]
-                }else{
-                    throw CleanDataException.NoAvailableVisits
+                for nextAvailableIndex in (index+1..<sortedVisit.count){
+                    if (sortedVisit[nextAvailableIndex].prizes.allObjects as! [Prize]).filter({!$0.redeemed}).count > 0{
+                        return sortedVisit[nextAvailableIndex]
+                    }
                 }
+                throw CleanDataException.NoAvailableVisits
             }
             return sortedVisit[index]
         }else{

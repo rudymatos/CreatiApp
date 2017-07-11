@@ -18,7 +18,7 @@ public class CoreDataHelper{
     
     private init(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        managedObjectContext = appDelegate.persistentContainer.viewContext
+        managedObjectContext = appDelegate.managedObjectContext
     }
     
     public func saveContext(){
@@ -98,12 +98,13 @@ extension CoreDataHelper{
         return loginUser
     }
     
-    func createBranchOffice(name : String, address: String, image: String){
+    func createBranchOffice(name : String, address: String, image: String) -> BranchOffice{
         let branchOffice = createObjectContext(entityName: BranchOffice.className) as! BranchOffice
         branchOffice.name = name
         branchOffice.address = address
         branchOffice.image = image
         self.saveContext()
+        return branchOffice
     }
     
     func createVisit(date: Date , branchOffice: BranchOffice, visitor: LoginUser, prizes : [Prize]){

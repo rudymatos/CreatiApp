@@ -16,9 +16,14 @@ public class BranchOffice: NSManagedObject {
     
     enum BranchOfficeType : String{
         
-        case LaSirena = "lasirena"
+        case Sirena = "sirena"
         case Bravo = "bravo"
+        case AU = "unidos"
         case Jumbo = "jumbo"
+        case Player = "playero"
+        case CienPorCiento = "100%"
+        case Zaglul = "zaglul"
+        case Iberia = "iberia"
         case Pola = "pola"
         case Nacional = "nacional"
         

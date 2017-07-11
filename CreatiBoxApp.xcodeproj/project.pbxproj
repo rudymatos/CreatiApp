@@ -25,6 +25,9 @@
 		F53A38401F06664600F853D0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A383F1F06664600F853D0 /* CoreDataHelper.swift */; };
 		F53A38481F066C0E00F853D0 /* AppExceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38471F066C0E00F853D0 /* AppExceptions.swift */; };
 		F53A384A1F066C8400F853D0 /* InitialDataCreatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */; };
+		F5641A861F12A76300A1B6EE /* oldpaso_schedule_prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5641A851F12A76300A1B6EE /* oldpaso_schedule_prod.plist */; };
+		F5641A8A1F12AB6E00A1B6EE /* oldpaso_schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5641A891F12AB6E00A1B6EE /* oldpaso_schedule.plist */; };
+		F56828E71F126D0E0043EF4F /* oldpaso_schedule.csv in Resources */ = {isa = PBXBuildFile; fileRef = F56828E61F126D0E0043EF4F /* oldpaso_schedule.csv */; };
 		F5A9F2481F0EF73A00802D2F /* Winner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F23E1F0EF73A00802D2F /* Winner+CoreDataClass.swift */; };
 		F5A9F2491F0EF73A00802D2F /* Winner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F23F1F0EF73A00802D2F /* Winner+CoreDataProperties.swift */; };
 		F5A9F24A1F0EF73A00802D2F /* Prize+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9F2401F0EF73A00802D2F /* Prize+CoreDataClass.swift */; };
@@ -82,6 +85,9 @@
 		F53A383F1F06664600F853D0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		F53A38471F066C0E00F853D0 /* AppExceptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExceptions.swift; sourceTree = "<group>"; };
 		F53A38491F066C8400F853D0 /* InitialDataCreatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialDataCreatorHelper.swift; sourceTree = "<group>"; };
+		F5641A851F12A76300A1B6EE /* oldpaso_schedule_prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = oldpaso_schedule_prod.plist; sourceTree = "<group>"; };
+		F5641A891F12AB6E00A1B6EE /* oldpaso_schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = oldpaso_schedule.plist; sourceTree = "<group>"; };
+		F56828E61F126D0E0043EF4F /* oldpaso_schedule.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oldpaso_schedule.csv; sourceTree = "<group>"; };
 		F5A9F23E1F0EF73A00802D2F /* Winner+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F5A9F23F1F0EF73A00802D2F /* Winner+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Winner+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F5A9F2401F0EF73A00802D2F /* Prize+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prize+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -231,11 +237,10 @@
 		F53A384B1F066F3B00F853D0 /* supporting_files */ = {
 			isa = PBXGroup;
 			children = (
-				F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */,
-				F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */,
-				F5EFD69C1F11C592000D064D /* 80770500.ttf */,
-				F5F3944F1F1133500035477F /* Face Off M54.ttf */,
-				F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */,
+				F56828E61F126D0E0043EF4F /* oldpaso_schedule.csv */,
+				F5641A891F12AB6E00A1B6EE /* oldpaso_schedule.plist */,
+				F5641A851F12A76300A1B6EE /* oldpaso_schedule_prod.plist */,
+				F56828E51F126CF90043EF4F /* fonts */,
 				F53A38181F04524B00F853D0 /* AppDelegate.swift */,
 				F53A38221F04524B00F853D0 /* Assets.xcassets */,
 				F53A38241F04524B00F853D0 /* LaunchScreen.storyboard */,
@@ -243,6 +248,18 @@
 				F53A381F1F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld */,
 			);
 			name = supporting_files;
+			sourceTree = "<group>";
+		};
+		F56828E51F126CF90043EF4F /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F50F25D51F0B30EB0093ACB2 /* Saloon Girl Fill.ttf */,
+				F5F3BBCD1F118AE6002238A6 /* Mission-Script.otf */,
+				F5EFD69C1F11C592000D064D /* 80770500.ttf */,
+				F5F3944F1F1133500035477F /* Face Off M54.ttf */,
+				F50F25DA1F0B3B780093ACB2 /* pulp fiction m54.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 		F5A8B9DC1F085C8100F26A79 /* controllers */ = {
@@ -382,9 +399,12 @@
 				F5F3BBCE1F118AE6002238A6 /* Mission-Script.otf in Resources */,
 				F50F25DB1F0B3B780093ACB2 /* pulp fiction m54.ttf in Resources */,
 				F5EFD69D1F11C592000D064D /* 80770500.ttf in Resources */,
+				F56828E71F126D0E0043EF4F /* oldpaso_schedule.csv in Resources */,
 				F5F394501F1133500035477F /* Face Off M54.ttf in Resources */,
 				F50F25D61F0B30EB0093ACB2 /* Saloon Girl Fill.ttf in Resources */,
 				F53A38231F04524B00F853D0 /* Assets.xcassets in Resources */,
+				F5641A861F12A76300A1B6EE /* oldpaso_schedule_prod.plist in Resources */,
+				F5641A8A1F12AB6E00A1B6EE /* oldpaso_schedule.plist in Resources */,
 				F53A381E1F04524B00F853D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,7 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7XYHS53D2W;
 				INFOPLIST_FILE = CreatiBoxApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,7 +612,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7XYHS53D2W;
 				INFOPLIST_FILE = CreatiBoxApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

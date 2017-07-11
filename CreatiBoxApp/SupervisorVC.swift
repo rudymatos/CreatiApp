@@ -30,8 +30,10 @@ class SupervisorVC: UIViewController {
             currentVisit = getAppControl().currentVisit
         }
         authorizedExtraStockButton.alpha = 0
-        if (currentVisit?.prizes.allObjects as! [Prize]).filter({!$0.redeemed}).count == 0{
-            authorizedExtraStockButton.alpha = 1
+        if let currentVisit = currentVisit{
+            if (currentVisit.prizes.allObjects as! [Prize]).filter({!$0.redeemed}).count == 0{
+                authorizedExtraStockButton.alpha = 1
+            }
         }
     }
     
@@ -61,6 +63,7 @@ class SupervisorVC: UIViewController {
                 let continueButton = UIAlertAction(title: "Continuar", style: .default, handler: { (action) in
                     nextVisit.authorized = true
                     self.creatiBoxImpl.persistData()
+                    self.alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Autorizado", message: "Visita fue autorizada satisfactoriamente")
                 })
                 let branchOfficeName = "\(nextVisit.branchOffice.name) \(nextVisit.branchOffice.address)"
                 let dateString = dateHelper.getSpanishReadeableDate(fromDate: nextVisit.date as Date)

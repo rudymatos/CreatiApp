@@ -20,6 +20,15 @@ class AppControl{
     var currentPrize: Prize?
     
     
+    func isFirstLaunch() -> Bool{
+        if !UserDefaults.standard.bool(forKey: "isAppFirstLaunch"){
+            UserDefaults.standard.set(true, forKey: "isAppFirstLaunch")
+            UserDefaults.standard.synchronize()
+            return true
+        }
+        return false
+    }
+    
     private init(){
         
     }

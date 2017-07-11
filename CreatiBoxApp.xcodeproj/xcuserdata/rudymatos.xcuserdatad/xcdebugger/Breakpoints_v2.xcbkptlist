@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/ReportVC.swift"
-            timestampString = "521264908.878493"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/PromontionPersonVC.swift"
-            timestampString = "521252889.975222"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/CreatiBoxAppImpl.swift"
-            timestampString = "521119874.680392"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/ReportVC.swift"
-            timestampString = "521264908.878493"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -122,13 +122,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/GameVC.swift"
-            timestampString = "521246611.530584"
+            timestampString = "521434216.653803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "goBack(_:)"
-            landmarkType = "7">
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "GameVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/MainVC.swift"
-            timestampString = "521252889.975222"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "keyboardWillShow(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/PromontionPersonVC.swift"
-            timestampString = "521252889.975222"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -170,13 +170,123 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CreatiBoxApp/PromontionPersonVC.swift"
-            timestampString = "521253305.667956"
+            timestampString = "521433975.620234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "keyboardWillHide(sender:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreatiBoxApp/InitialDataCreatorHelper.swift"
+            timestampString = "521433975.620234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "createInitialData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreatiBoxApp/SupervisorVC.swift"
+            timestampString = "521433975.620234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "configureView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreatiBoxApp/AppDelegate.swift"
+            timestampString = "521433243.478899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreatiBoxApp.AppDelegate.persistentContainer.getter : __ObjC.NSPersistentContainer"
+                  moduleName = "CreatiBoxApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rudymatos/Documents/CreatiBoxApp/CreatiBoxApp/AppDelegate.swift"
+                  timestampString = "521430127.523177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreatiBoxApp.AppDelegate.persistentContainer.setter : __ObjC.NSPersistentContainer"
+                  moduleName = "CreatiBoxApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rudymatos/Documents/CreatiBoxApp/CreatiBoxApp/AppDelegate.swift"
+                  timestampString = "521430127.524602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreatiBoxApp.AppDelegate.(persistentContainer.getter : __ObjC.NSPersistentContainer).(closure #1)"
+                  moduleName = "CreatiBoxApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rudymatos/Documents/CreatiBoxApp/CreatiBoxApp/AppDelegate.swift"
+                  timestampString = "521430127.525873"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreatiBoxApp.AppDelegate.init () -&gt; CreatiBoxApp.AppDelegate"
+                  moduleName = "CreatiBoxApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rudymatos/Documents/CreatiBoxApp/CreatiBoxApp/AppDelegate.swift"
+                  timestampString = "521430127.527106"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

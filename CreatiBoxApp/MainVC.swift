@@ -23,9 +23,9 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        initDateHelper.createUserLoginData()
-//        initDateHelper.createBranchOffices()
-//        try! initDateHelper.createPrizes()
+        if getAppControl().isFirstLaunch(){
+            initDateHelper.createInitialData()
+        }
         configureView()
     }
     
