@@ -59,6 +59,31 @@ class MainVC: UIViewController {
         password.text = ""
     }
     
+    
+    private func restock(supervisor: LoginUser){
+        print("restocking")
+        do{
+            let todaysVisit = try creatiBoxImpl.getVisit(forDate: Date(), bySupervisor: supervisor)
+            if !todaysVisit.restoked{
+                let redeemedPrizes = (todaysVisit.prizes.allObjects as! [Prize]).filter({$0.redeemed}).map({$0.type})
+                let currentDateString = dateHelper.getDateString(fromDate: Date())
+                var prizeTypeList: [Prize.PrizeType] = []
+                for currentRedeemedPrize in redeemedPrizes{
+                    print("following prize should be restoked : \(currentRedeemedPrize)")
+                    if let currentPrizeType = Prize.PrizeType(rawValue: currentRedeemedPrize){
+                        prizeTypeList.append(currentPrizeType)
+                    }
+                }
+                initDateHelper.regenerateStockForDays(username: supervisor.username, date: currentDateString, restockItems: prizeTypeList)
+            }
+            todaysVisit.restoked = true
+            creatiBoxImpl.persistData()
+        }catch{
+            print("No hay visitas para llenar el inventario")
+        }
+    }
+    
+    
     @IBAction func login(_ sender: UIButton) {
         var visit : Visit!
         if let currentUsername = username.text, let currentPassword = password.text , currentUsername != "" && currentPassword != ""{
@@ -66,7 +91,7 @@ class MainVC: UIViewController {
                 let currentUser = try creatiBoxImpl.login(username: currentUsername, password: currentPassword)
                 let userType = LoginUser.UserType(rawValue: currentUser.type)!
                 getAppControl().currentUser = currentUser
-                
+                restock(supervisor: userType.isSupervisor() ? currentUser : currentUser.supervisor!)
                 if userType.isSupervisor() {
                     do{
                         visit = try creatiBoxImpl.getVisit(bySupervisor: userType.isSupervisor() ? currentUser : currentUser.supervisor!)

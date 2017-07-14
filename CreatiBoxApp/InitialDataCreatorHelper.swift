@@ -33,6 +33,25 @@ public class InitialDataCreatorHelper{
         }
     }
     
+    func getPrizesForDate(date: Date, forSupervisor : LoginUser) -> [Prize.PrizeType]{
+        var prizesForDate : [Prize.PrizeType] = []
+        if let schedulePath = Bundle.main.path(forResource: "oldpaso_schedule", ofType: "plist"),
+            let dictionary = NSDictionary(contentsOfFile: schedulePath),
+            let currentSupervisor = dictionary[forSupervisor.username] as? [String: Any],
+            let visits = currentSupervisor["visits"] as? [[String: Any]]{
+            let todaysDateString = dateHelper.getDateString(fromDate: Date())
+            if let currentVisit = visits.filter({($0["visit_date"] as! String) == todaysDateString}).first {
+                let prizes = currentVisit["prizes"] as? [String]
+                for currentPrize in prizes!{
+                    if let prizeType = Prize.PrizeType(rawValue: currentPrize){
+                        prizesForDate.append(prizeType)
+                    }
+                }
+            }
+        }
+        return prizesForDate
+    }
+    
     func createInitialData(){
         if let schedulePath = Bundle.main.path(forResource: "oldpaso_schedule", ofType: "plist"), let dictionary = NSDictionary(contentsOfFile: schedulePath){
             for supervisorKey in dictionary.allKeys{

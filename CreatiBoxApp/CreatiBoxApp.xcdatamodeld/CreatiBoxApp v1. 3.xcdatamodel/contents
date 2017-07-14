@@ -28,6 +28,7 @@
     <entity name="Visit" representedClassName="Visit" syncable="YES">
         <attribute name="authorized" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="restoked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="branchOffice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BranchOffice" inverseName="visits" inverseEntity="BranchOffice" syncable="YES"/>
         <relationship name="prizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" inverseName="visit" inverseEntity="Prize" syncable="YES"/>
         <relationship name="visitor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginUser" inverseName="visits" inverseEntity="LoginUser" syncable="YES"/>
@@ -44,7 +45,7 @@
         <element name="BranchOffice" positionX="-1053" positionY="-189" width="128" height="118"/>
         <element name="LoginUser" positionX="-972" positionY="378" width="128" height="148"/>
         <element name="Prize" positionX="-774" positionY="-76" width="128" height="148"/>
-        <element name="Visit" positionX="-1242" positionY="-9" width="128" height="120"/>
+        <element name="Visit" positionX="-1242" positionY="-9" width="128" height="135"/>
         <element name="Winner" positionX="-578" positionY="207" width="128" height="133"/>
     </elements>
 </model>

@@ -100,6 +100,7 @@
 		F5A9F2471F0EF73A00802D2F /* Visit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Visit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F5A9F2531F106C3400802D2F /* DataReportDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReportDTO.swift; sourceTree = "<group>"; };
 		F5A9F2551F107B0700802D2F /* ScheduleReportTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleReportTVC.swift; sourceTree = "<group>"; };
+		F5C7FD7C1F18634C007E00B9 /* CreatiBoxApp v1. 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CreatiBoxApp v1. 3.xcdatamodel"; sourceTree = "<group>"; };
 		F5CDDE321F07E47800F1E056 /* CreatiBoxAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreatiBoxAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDDE341F07E47800F1E056 /* CreatiBoxAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatiBoxAppTests.swift; sourceTree = "<group>"; };
 		F5CDDE361F07E47800F1E056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -684,10 +685,11 @@
 		F53A381F1F04524B00F853D0 /* CreatiBoxApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F5C7FD7C1F18634C007E00B9 /* CreatiBoxApp v1. 3.xcdatamodel */,
 				F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */,
 				F53A38201F04524B00F853D0 /* CreatiBoxApp.xcdatamodel */,
 			);
-			currentVersion = F5CDDE5E1F0834DA00F1E056 /* CreatiBoxApp v1.0.xcdatamodel */;
+			currentVersion = F5C7FD7C1F18634C007E00B9 /* CreatiBoxApp v1. 3.xcdatamodel */;
 			path = CreatiBoxApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -41,6 +41,12 @@ class DateHelper{
         return calendar.date(from: components)!
     }
     
+    func getDateString(fromDate: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from:fromDate)
+    }
+    
     func getSpanishReadeableDate(fromDate: Date) -> String{
         var components = calendar.dateComponents(componentsSet, from: fromDate)
         let monthString = getSpanishMonth(month: components.month ?? 1)

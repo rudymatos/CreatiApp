@@ -18,6 +18,7 @@ extension Visit {
 
     @NSManaged public var date: NSDate
     @NSManaged public var authorized: Bool
+    @NSManaged public var restoked: Bool
     @NSManaged public var branchOffice: BranchOffice
     @NSManaged public var visitor: LoginUser
     @NSManaged public var prizes: NSSet
