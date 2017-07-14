@@ -17,9 +17,8 @@ class MainVC: UIViewController {
     private let alertViewHelper = AlertViewHelper.sharedInstance
     private let initDateHelper = InitialDataCreatorHelper.sharedInstance
     private let dateHelper = DateHelper.sharedInstance
+    private let coreDataHelper = CoreDataHelper.sharedInstance
     private var isKeyboardBeingShown = false
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +106,7 @@ class MainVC: UIViewController {
                 }
                 
             }catch CleanDataException.NoAuthorizedVisits{
-                alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Sucursales no disponibles", message: "No existen visitas a surcursales en el dia de hoy ni manana.")
+                alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Sucursales no disponibles", message: "No existen visitas a surcursales/premios en el dia de hoy ni futuras visitas autorizadas.")
             }catch CleanDataException.NoPrizeFound{
                 alertViewHelper.createGenericMessageWithOkButton(showOnVC: self, title: "Premios no disponibles", message: "No existen visitas a surcursales en el dia de hoy ni manana.")
             }catch LoginExceptions.InvalidUsernameOrPassword(let message){

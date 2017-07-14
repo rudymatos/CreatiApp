@@ -17,6 +17,22 @@ public class InitialDataCreatorHelper{
     private init(){
     }
     
+    func regenerateStockForDays(username:String, date: String, restockItems: [Prize.PrizeType]){
+        do{
+            let supervisor = try coreDataHelper.getEntityByParam(fetchRequest: LoginUser.fetchRequest(), query: "username = %@", params: [username]).first!
+            if let currentVisit = (supervisor.visits.allObjects as! [Visit]).filter({($0.date as Date) == dateHelper.getDateFromString(dateString: date)}).first{
+                for prizeType in restockItems{
+                    print("attempting to create prize \(prizeType.getSpanishVersion())")
+                    let currentPrize = coreDataHelper.createPrize(name: prizeType.getSpanishVersion(), type: prizeType, branchOffice: currentVisit.branchOffice)
+                    currentVisit.addToPrizes(currentPrize)
+                    coreDataHelper.saveContext()
+                }
+            }
+        }catch let error as NSError{
+            print(error)
+        }
+    }
+    
     func createInitialData(){
         if let schedulePath = Bundle.main.path(forResource: "oldpaso_schedule", ofType: "plist"), let dictionary = NSDictionary(contentsOfFile: schedulePath){
             for supervisorKey in dictionary.allKeys{

@@ -360,7 +360,7 @@
 				TargetAttributes = {
 					F53A38141F04524B00F853D0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7XYHS53D2W;
+						DevelopmentTeam = NYFE69T5LQ;
 						ProvisioningStyle = Automatic;
 					};
 					F5CDDE311F07E47800F1E056 = {
@@ -596,11 +596,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7XYHS53D2W;
+				DEVELOPMENT_TEAM = NYFE69T5LQ;
 				INFOPLIST_FILE = CreatiBoxApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudymatosdev.extapps.CreatiBoxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -610,11 +610,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7XYHS53D2W;
+				DEVELOPMENT_TEAM = NYFE69T5LQ;
 				INFOPLIST_FILE = CreatiBoxApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beardedgentleman.extdevs.CreatiBoxApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudymatosdev.extapps.CreatiBoxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

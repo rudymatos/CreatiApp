@@ -18,7 +18,7 @@
 				<key>branchoffice_name</key>
 				<string>Sirena</string>
 				<key>branchoffice_address</key>
-				<string>Wiston Churchill</string>
+				<string>Winston Churchill</string>
 				<key>prizes</key>
 				<array>
 					<string>prize_spoon</string>
@@ -73,7 +73,7 @@
 				<key>branchoffice_name</key>
 				<string>Sirena</string>
 				<key>branchoffice_address</key>
-				<string>Wiston Churchill</string>
+				<string>Winston Churchill</string>
 				<key>prizes</key>
 				<array>
 					<string>prize_spoon</string>
@@ -560,7 +560,7 @@
 				<key>branchoffice_name</key>
 				<string>Sirena</string>
 				<key>branchoffice_address</key>
-				<string>Wiston Churchill</string>
+				<string>Winston Churchill</string>
 				<key>prizes</key>
 				<array>
 					<string>prize_spoon</string>
@@ -592,7 +592,7 @@
 			<key>display_name</key>
 			<string>Entrenamiento</string>
 			<key>username</key>
-			<string>prom_entranamiento</string>
+			<string>prom_entrenamiento</string>
 			<key>password</key>
 			<string>12345</string>
 		</dict>
@@ -613,7 +613,7 @@
 				<key>branchoffice_name</key>
 				<string>Sirena</string>
 				<key>branchoffice_address</key>
-				<string>Wiston Churchill</string>
+				<string>Winston Churchill</string>
 				<key>prizes</key>
 				<array>
 					<string>prize_spoon</string>
@@ -1121,7 +1121,7 @@
 				<key>branchoffice_name</key>
 				<string>Sirena</string>
 				<key>branchoffice_address</key>
-				<string>Wiston Churchill</string>
+				<string>Winston Churchill</string>
 				<key>prizes</key>
 				<array>
 					<string>prize_spoon</string>

@@ -55,7 +55,7 @@
                                         <color key="textColor" red="0.60607016086578369" green="0.19758757948875427" blue="0.10257720202207565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="promotor1" placeholder="Nombre de Usuario" textAlignment="center" minimumFontSize="17" background="text_edit_background" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Jo-okU">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre de Usuario" textAlignment="center" minimumFontSize="17" background="text_edit_background" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Jo-okU">
                                         <rect key="frame" x="0.0" y="57" width="400" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="DuG-dg-JBP"/>
@@ -65,7 +65,7 @@
                                         <fontDescription key="fontDescription" name="EurostileT-Regu" family="EurostileT" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345" placeholder="Contrasena" textAlignment="center" minimumFontSize="17" background="text_edit_background" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-yG-kQF">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contrasena" textAlignment="center" minimumFontSize="17" background="text_edit_background" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-yG-kQF">
                                         <rect key="frame" x="0.0" y="122" width="400" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="400" id="Oy5-gF-KIh"/>
@@ -490,7 +490,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Tg9-11-W4k">
                                 <rect key="frame" x="456" y="167" width="200" height="500"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zui-WS-mM6">
+                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zui-WS-mM6">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="ZBx-C1-QM1"/>
